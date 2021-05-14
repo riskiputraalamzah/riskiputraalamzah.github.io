@@ -1,0 +1,125 @@
+/* start css for dekstop */
+.my-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: blueviolet;
+  height: 60px;
+}
+a.logo {
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+}
+.my-nav > a.logo,
+.my-nav > ul > li > a {
+  text-decoration: none;
+}
+.my-nav li a {
+  color: rgb(211, 211, 211);
+}
+.my-nav li.active a {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+}
+.my-menu {
+  display: flex;
+  list-style-type: none;
+  width: 50%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.hamburger-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  justify-content: space-around;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger-menu > span {
+  display: block;
+  background-color: white;
+  height: 3px;
+  transition: 0.5s ease-in;
+  border-radius: 5px;
+}
+
+.hamburger-menu.show-menu > span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5px, 16px);
+}
+.hamburger-menu.show-menu > span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.show-menu > span:nth-child(3) {
+  transform: rotate(-45deg) translate(-1.5px, -14px);
+}
+
+section:nth-child(odd) {
+  background-color: blueviolet;
+  color: white;
+}
+section#introduction img {
+  width: 250px;
+  height: 250px;
+}
+/* end css for dekstop  */
+
+/* css for tablet */
+@media (max-width: 768px) {
+  .my-backdrop {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: -9999;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease-in;
+  }
+  .my-backdrop.show-menu {
+    opacity: 1;
+  }
+  .my-nav {
+    justify-content: space-around;
+  }
+  .my-menu.show-menu {
+    left: 0;
+  }
+  .my-menu {
+    transition: 0.5s ease-in;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99991;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 60px;
+    left: -50%;
+    width: 50%;
+    bottom: 0;
+    background-color: blueviolet;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+/* end css for tablet */
+
+/* start css for mobile */
+@media (max-width: 569px) {
+  .my-nav,
+  .my-menu {
+    padding: 0 12px;
+  }
+  .my-nav {
+    justify-content: space-between;
+  }
+  .my-menu {
+    align-items: flex-start;
+  }
+}
+/* end css for mobile */
