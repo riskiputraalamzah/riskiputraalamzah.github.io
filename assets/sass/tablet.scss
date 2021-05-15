@@ -2,10 +2,11 @@
   .my-backdrop {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: fixed;
     z-index: -9999;
-    top: 60px;
-    height: 100%;
+    top: 0;
+
+    bottom: 0;
     left: 0;
     right: 0;
     transition: 0.5s ease-in;
@@ -16,6 +17,9 @@
   }
   .my-nav {
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   .my-menu {
     &.show-menu {
@@ -23,14 +27,14 @@
     }
     transition: 0.5s ease-in;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     z-index: 99991;
     align-items: center;
     justify-content: space-evenly;
     top: 60px;
     left: -50%;
     width: 50%;
-    height: 100%;
+    bottom: 0;
     background-color: blueviolet;
   }
   .hamburger-menu {
@@ -39,6 +43,7 @@
 
   section {
     &#introduction {
+      margin-top: 60px;
       .row {
         flex-direction: column-reverse;
       }
