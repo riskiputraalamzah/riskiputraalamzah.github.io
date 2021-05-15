@@ -60,10 +60,11 @@ a.logo {
 
 section {
   $fontText: calc(2vw + 250px);
-
-  &:nth-child(odd) {
-    background-color: blueviolet;
-    color: white;
+  // background-color: white;
+  // color: black;
+  &:nth-child(2n + 1) {
+    background-color: blueviolet !important;
+    color: white !important;
   }
 
   //   section introduction

@@ -58,9 +58,9 @@ a.logo {
   transform: rotate(-45deg) translate(-1.5px, -14px);
 }
 
-section:nth-child(odd) {
-  background-color: blueviolet;
-  color: white;
+section:nth-child(2n+1) {
+  background-color: blueviolet !important;
+  color: white !important;
 }
 section#introduction img {
   width: calc(2vw + 250px);
