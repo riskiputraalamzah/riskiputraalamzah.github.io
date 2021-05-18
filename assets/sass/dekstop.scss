@@ -1,17 +1,22 @@
+@use 'variabel';
 .my-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #8a2be2;
+  background-color: variabel.$myColor;
   height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99992;
   a.logo,
   ul > li > a {
     text-decoration: none;
   }
   li a {
-    color: rgb(211, 211, 211);
+    color: rgb(187, 187, 187);
   }
-  li.active a,
+  li a.active,
   li a:hover {
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -59,16 +64,42 @@ a.logo {
 }
 
 section {
-  $fontText: calc(2vw + 250px);
+  $fontText: calc(100vw / 10 + 100px);
+  scroll-margin-top: 80px;
   // background-color: white;
   // color: black;
-  &:nth-child(2n + 1) {
-    background-color: blueviolet !important;
-    color: white !important;
+  &.violet {
+    background-color: variabel.$myColor;
+    color: white;
+  }
+
+  // untuk judul section yang mau dikasih garis bawah
+
+  & span.line-mark-title {
+    position: relative;
+
+    font-weight: 500;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      left: 0;
+      bottom: -5px;
+      height: 3px;
+      border-radius: 3px;
+      background-color: variabel.$myColor;
+    }
+  }
+  & span.mark-title {
+    color: variabel.$myColor;
   }
 
   //   section introduction
   &#introduction {
+    height: 90vh;
+    margin-top: 60px;
+    position: relative;
     img {
       width: $fontText;
       height: $fontText;
@@ -81,6 +112,22 @@ section {
         text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
           -1px -1px 0 white;
       }
+    }
+    .container-cv {
+      position: absolute;
+      left: 0;
+      bottom: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &#about {
+    .value-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
     }
   }
 }

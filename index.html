@@ -21,32 +21,32 @@
   <body>
     <div class="my-backdrop"></div>
     <div class="my-nav">
-      <a href="/" class="logo">Putra</a>
+      <a href="/" class="logo">My Profile</a>
       <div class="hamburger-menu">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <ul class="my-menu">
-        <li class="active"><a href="#">Introduction</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Experience</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="list-menu">
+          <a class="link-menu active" href="#introduction">Introduction</a>
+        </li>
+        <li class="list-menu"><a class="link-menu" href="#about">About</a></li>
+        <li class="list-menu"><a class="link-menu" href="#">Experience</a></li>
+        <li class="list-menu"><a class="link-menu" href="#">Skill</a></li>
+        <li class="list-menu"><a class="link-menu" href="#">Contact</a></li>
       </ul>
     </div>
 
     <section id="introduction">
       <div class="container py-5">
-        <div class="row align-items-center no-gutters">
+        <div class="row first-row align-items-center no-gutters">
           <div class="col text-center text-lg-start">
-            <span class="text-permanent"
-              >Hello, My Name is Riski Putra Alamzah <br />
-              i'm a</span
-            >
-            <span class="text-typed"></span>
+            <div class="sapaan">Hello, my name is</div>
+            <div class="my-name fw-bold">Riski Putra Alamzah</div>
+            <div>I'm a <span class="text-typed"></span></div>
           </div>
-          <div class="col text-center">
+          <div class="col col-md-4 text-md-right text-center">
             <img
               src="./assets/image/1.jpg"
               class="img-fluid img-thumbnail rounded-circle"
@@ -55,7 +55,11 @@
           </div>
         </div>
       </div>
+      <div class="container-cv">
+        <button class="btn btn-primary rounded-pill btn-lg">Download CV</button>
+      </div>
     </section>
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#8a2be2"
@@ -65,11 +69,37 @@
     </svg>
 
     <section id="about">
-      <h5 class="title">About</h5>
-      <div class="row">
-        <div class="col"></div>
+      <div class="text-center mb-5">
+        <span class="line-mark-title fs-3">About Me</span>
+      </div>
+      <div class="container">
+        <div class="who-am-i">
+          <div class="row mb-3">
+            <div class="col-md-7 text-center">
+              <span class="mark-title fw-bold fs-5 fst-italice">Who am i</span>
+            </div>
+          </div>
+          <div class="row col-reverse">
+            <div class="col-md-7">
+              <div class="value-about text-center">
+                <p>
+                  I am a person who likes to spend time in front of computers,
+                  cell phones in search of new experiences and knowledge.
+                </p>
+                <p>and I am a person who does not know the time to work.</p>
+                <p class="fw-bold fst-italic">
+                  "Don't stop when you're TIRED, stop when you're DONE"
+                </p>
+              </div>
+            </div>
+            <div class="col-md-5 col--sm-7 col-9">
+              <img src="./assets/image/about-me.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"

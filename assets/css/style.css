@@ -5,15 +5,19 @@
   align-items: center;
   background-color: #8a2be2;
   height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99992;
 }
 .my-nav a.logo,
 .my-nav ul > li > a {
   text-decoration: none;
 }
 .my-nav li a {
-  color: lightgray;
+  color: #bbbbbb;
 }
-.my-nav li.active a,
+.my-nav li a.active,
 .my-nav li a:hover {
   color: white;
   font-weight: 500;
@@ -58,13 +62,40 @@ a.logo {
   transform: rotate(-45deg) translate(-1.5px, -14px);
 }
 
-section:nth-child(2n+1) {
-  background-color: blueviolet !important;
-  color: white !important;
+section {
+  scroll-margin-top: 80px;
+}
+section.violet {
+  background-color: #8a2be2;
+  color: white;
+}
+section span.line-mark-title {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+}
+section span.line-mark-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #8a2be2;
+}
+section span.mark-title {
+  color: #8a2be2;
+}
+section#introduction {
+  height: 90vh;
+  margin-top: 60px;
+  position: relative;
 }
 section#introduction img {
-  width: calc(2vw + 250px);
-  height: calc(2vw + 250px);
+  width: calc(100vw / 10 + 100px);
+  height: calc(100vw / 10 + 100px);
 }
 section#introduction .col:nth-child(1) {
   font-size: calc(3vw + 8px);
@@ -73,6 +104,20 @@ section#introduction .col:nth-child(1) .text-typed {
   font-weight: bold;
   color: black;
   text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+section#introduction .container-cv {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section#about .value-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -94,10 +139,6 @@ section#introduction .col:nth-child(1) .text-typed {
 
   .my-nav {
     justify-content: space-around;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99992;
   }
 
   .my-menu {
@@ -111,7 +152,8 @@ section#introduction .col:nth-child(1) .text-typed {
     left: -50%;
     width: 50%;
     bottom: 0;
-    background-color: blueviolet;
+    border-right: 2px solid #8a2be2;
+    background-color: #8a2be2;
   }
   .my-menu.show-menu {
     left: 0;
@@ -121,11 +163,12 @@ section#introduction .col:nth-child(1) .text-typed {
     display: flex;
   }
 
-  section#introduction {
-    margin-top: 60px;
-  }
-  section#introduction .row {
+  section#introduction .first-row {
     flex-direction: column-reverse;
+  }
+  section#about .row.col-reverse {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }
 @media (max-width: 569px) {
