@@ -88,9 +88,7 @@ section span.mark-title {
   color: #8a2be2;
 }
 section#introduction {
-  height: 90vh;
   margin-top: 60px;
-  position: relative;
 }
 section#introduction img {
   width: calc(100vw / 10 + 100px);
@@ -103,14 +101,6 @@ section#introduction .col:nth-child(1) .text-typed {
   font-weight: bold;
   color: black;
   text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
-}
-section#introduction .container-cv {
-  position: absolute;
-  left: 0;
-  bottom: 20vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 section#about .value-about {
   display: flex;

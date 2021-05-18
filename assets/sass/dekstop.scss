@@ -97,9 +97,9 @@ section {
 
   //   section introduction
   &#introduction {
-    height: 90vh;
+    // height: 90vh;
     margin-top: 60px;
-    position: relative;
+
     img {
       width: $fontText;
       height: $fontText;
@@ -112,14 +112,6 @@ section {
         text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
           -1px -1px 0 white;
       }
-    }
-    .container-cv {
-      position: absolute;
-      left: 0;
-      bottom: 20vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
     }
   }
   &#about {
