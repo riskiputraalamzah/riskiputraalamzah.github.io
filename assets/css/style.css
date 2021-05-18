@@ -71,7 +71,6 @@ section.violet {
 }
 section span.line-mark-title {
   position: relative;
-  font-size: 20px;
   font-weight: 500;
 }
 section span.line-mark-title::after {
@@ -108,7 +107,7 @@ section#introduction .col:nth-child(1) .text-typed {
 section#introduction .container-cv {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 20vh;
   width: 100%;
   display: flex;
   justify-content: center;
