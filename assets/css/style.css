@@ -87,17 +87,22 @@ section span.line-mark-title::after {
 section span.mark-title {
   color: #8a2be2;
 }
-section#introduction {
+section.introduction {
+  height: calc(100vh - 60px);
   margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
-section#introduction img {
+section.introduction img {
   width: calc(100vw / 10 + 100px);
   height: calc(100vw / 10 + 100px);
 }
-section#introduction .col:nth-child(1) {
+section.introduction .col:nth-child(1) {
   font-size: calc(3vw + 8px);
 }
-section#introduction .col:nth-child(1) .text-typed {
+section.introduction .col:nth-child(1) .text-typed {
   font-weight: bold;
   color: black;
   text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
@@ -152,7 +157,7 @@ section#about .value-about {
     display: flex;
   }
 
-  section#introduction .first-row {
+  section.introduction .first-row {
     flex-direction: column-reverse;
   }
   section#about .row.col-reverse {

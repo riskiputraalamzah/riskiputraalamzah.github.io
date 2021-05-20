@@ -29,7 +29,7 @@
       </div>
       <ul class="my-menu">
         <li class="list-menu">
-          <a class="link-menu active" href="#introduction">Introduction</a>
+          <a class="link-menu active" href="#introducing">Introducing</a>
         </li>
         <li class="list-menu"><a class="link-menu" href="#about">About</a></li>
         <li class="list-menu">
@@ -40,8 +40,8 @@
       </ul>
     </div>
 
-    <section id="introduction" class="d-flex flex-column align-items-center">
-      <div class="container py-5">
+    <section id="introducing" class="introduction">
+      <div class="container">
         <div class="row first-row align-items-center no-gutters">
           <div class="col text-center text-lg-start">
             <div class="sapaan">Hello, my name is</div>
@@ -58,51 +58,178 @@
         </div>
       </div>
       <div class="container-cv">
-        <button class="btn btn-primary rounded-pill btn-lg">Download CV</button>
+        <span class="btn btn-sm btn-outline-light" style="cursor: pointer"
+          >Show more of my information</span
+        >
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
           fill-opacity="1"
           d="M0,128L48,149.3C96,171,192,213,288,197.3C384,181,480,107,576,101.3C672,96,768,160,864,165.3C960,171,1056,117,1152,106.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
-      </svg>
+      </svg> -->
     </section>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#8A2BE2"
+        fill-opacity="1"
+        d="M0,64L34.3,69.3C68.6,75,137,85,206,112C274.3,139,343,181,411,197.3C480,213,549,203,617,170.7C685.7,139,754,85,823,74.7C891.4,64,960,96,1029,128C1097.1,160,1166,192,1234,192C1302.9,192,1371,160,1406,144L1440,128L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+      ></path>
+    </svg>
     <section id="about">
       <div class="text-center mb-5">
         <span class="line-mark-title fs-3">About Me</span>
       </div>
       <div class="container">
-        <div class="who-am-i">
-          <div class="row col-reverse">
-            <div class="col-md-7">
-              <div class="value-about text-center">
-                <p>
-                  I am a person who likes to spend time in front of computers,
-                  cell phones in search of new experiences and knowledge.
-                </p>
-                <p>and I am a person who does not know the time to work.</p>
-                <p class="fw-bold fst-italic">
-                  "Don't stop when you're TIRED, stop when you're DONE"
-                </p>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide carousel-dark"
+          data-bs-interval="false"
+        >
+          <div class="carousel-indicators" style="bottom: -40px">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="who-am-i">
+                <div class="row col-reverse">
+                  <div class="col-md-7">
+                    <div class="value-about text-center">
+                      <p>
+                        I am a person who likes to spend time in front of
+                        computers, cell phones in search of new experiences and
+                        knowledge.
+                      </p>
+                      <p>
+                        and I am a person who does not know the time to work.
+                      </p>
+                      <p class="fw-bold fst-italic">
+                        "Don't stop when you're TIRED, stop when you're DONE"
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col--sm-7 col-9">
+                    <img
+                      src="./assets/image/about-me.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-5 col--sm-7 col-9">
-              <img src="./assets/image/about-me.png" class="img-fluid" alt="" />
+            <div class="carousel-item">
+              <div class="who-am-i">
+                <div class="row col-reverse">
+                  <div class="col-md-7">
+                    <div class="value-about text-center">
+                      <p>
+                        I am a person who likes to spend time in front of
+                        computers, cell phones in search of new experiences and
+                        knowledge.
+                      </p>
+                      <p>
+                        and I am a person who does not know the time to work.
+                      </p>
+                      <p class="fw-bold fst-italic">
+                        "Don't stop when you're TIRED, stop when you're DONE"
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col--sm-7 col-9">
+                    <img
+                      src="./assets/image/about-me.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="who-am-i">
+                <div class="row col-reverse">
+                  <div class="col-md-7">
+                    <div class="value-about text-center">
+                      <p>
+                        I am a person who likes to spend time in front of
+                        computers, cell phones in search of new experiences and
+                        knowledge.
+                      </p>
+                      <p>
+                        and I am a person who does not know the time to work.
+                      </p>
+                      <p class="fw-bold fst-italic">
+                        "Don't stop when you're TIRED, stop when you're DONE"
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-5 col--sm-7 col-9">
+                    <img
+                      src="./assets/image/about-me.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev justify-content-start"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next justify-content-end"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#8a2be2"
           fill-opacity="1"
           d="M0,128L48,149.3C96,171,192,213,288,197.3C384,181,480,107,576,101.3C672,96,768,160,864,165.3C960,171,1056,117,1152,106.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
-      </svg>
+      </svg> -->
     </section>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#8A2BE2"
+        fill-opacity="1"
+        d="M0,64L34.3,69.3C68.6,75,137,85,206,112C274.3,139,343,181,411,197.3C480,213,549,203,617,170.7C685.7,139,754,85,823,74.7C891.4,64,960,96,1029,128C1097.1,160,1166,192,1234,192C1302.9,192,1371,160,1406,144L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+      ></path>
+    </svg>
     <section id="experience">
       <div class="text-center mb-5">
         <span class="line-mark-title fs-3">My Experience</span>
@@ -120,14 +247,14 @@
         quod natus accusamus laboriosam facilis perspiciatis dolorum dolorem a
         fuga omnis blanditiis fugiat consequuntur? Beatae, aspernatur vitae.
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,128L48,149.3C96,171,192,213,288,197.3C384,181,480,107,576,101.3C672,96,768,160,864,165.3C960,171,1056,117,1152,106.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#8A2BE2"
+        fill-opacity="1"
+        d="M0,64L34.3,69.3C68.6,75,137,85,206,112C274.3,139,343,181,411,197.3C480,213,549,203,617,170.7C685.7,139,754,85,823,74.7C891.4,64,960,96,1029,128C1097.1,160,1166,192,1234,192C1302.9,192,1371,160,1406,144L1440,128L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"
+      ></path>
+    </svg>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script

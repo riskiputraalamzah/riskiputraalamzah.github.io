@@ -10,7 +10,7 @@ toggleMenu.addEventListener("click", function () {
 // typed introduction
 var typed = new Typed(".text-typed", {
   // Waits 1000ms after typing "First"
-  strings: ["Full Stack Developer.", "Web Developer.", "Freelancer."],
+  strings: ["Full Stack Developer", "Web Developer", "Freelancer"],
   loop: true,
   typeSpeed: 100,
   delaySpeed: 200,

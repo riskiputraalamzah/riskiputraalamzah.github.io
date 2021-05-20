@@ -41,7 +41,7 @@
   }
 
   section {
-    &#introduction {
+    &.introduction {
       .first-row {
         flex-direction: column-reverse;
       }
