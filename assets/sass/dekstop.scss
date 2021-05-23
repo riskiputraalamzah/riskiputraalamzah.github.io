@@ -94,6 +94,9 @@ section {
   & span.mark-title {
     color: variabel.$myColor;
   }
+  &.violet span.line-mark-title::after {
+    background-color: white !important;
+  }
 
   //   section introduction
   &.introduction {
@@ -123,6 +126,19 @@ section {
       flex-direction: column;
       justify-content: space-evenly;
       height: 100%;
+    }
+    .row.right-image {
+      flex-direction: row-reverse;
+    }
+  }
+  &#experience {
+    .row {
+      max-height: 100vh;
+      overflow: auto;
+      justify-content: center;
+      .card {
+        color: black !important;
+      }
     }
   }
 }

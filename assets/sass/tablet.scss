@@ -47,9 +47,12 @@
       }
     }
     &#about {
-      .row.col-reverse {
-        flex-direction: column-reverse;
+      .row.right-image {
+        flex-direction: column;
         align-items: center;
+      }
+      .row.left-image {
+        justify-content: center;
       }
     }
   }

@@ -87,6 +87,9 @@ section span.line-mark-title::after {
 section span.mark-title {
   color: #8a2be2;
 }
+section.violet span.line-mark-title::after {
+  background-color: white !important;
+}
 section.introduction {
   height: calc(100vh - 60px);
   margin-top: 60px;
@@ -112,6 +115,17 @@ section#about .value-about {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+}
+section#about .row.right-image {
+  flex-direction: row-reverse;
+}
+section#experience .row {
+  max-height: 100vh;
+  overflow: auto;
+  justify-content: center;
+}
+section#experience .row .card {
+  color: black !important;
 }
 
 @media (max-width: 768px) {
@@ -160,9 +174,12 @@ section#about .value-about {
   section.introduction .first-row {
     flex-direction: column-reverse;
   }
-  section#about .row.col-reverse {
-    flex-direction: column-reverse;
+  section#about .row.right-image {
+    flex-direction: column;
     align-items: center;
+  }
+  section#about .row.left-image {
+    justify-content: center;
   }
 }
 @media (max-width: 569px) {
@@ -177,6 +194,11 @@ section#about .value-about {
 
   .my-menu {
     align-items: flex-start;
+  }
+
+  section#experience .row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 * {

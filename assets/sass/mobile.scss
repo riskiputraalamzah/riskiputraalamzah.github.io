@@ -9,4 +9,10 @@
   .my-menu {
     align-items: flex-start;
   }
+  section#experience {
+    .row {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+  }
 }

@@ -41,3 +41,17 @@ containerMenu.addEventListener("click", function (e) {
     e.target.classList.add("active");
   }
 });
+
+// section about
+const sliderAbouts = document.querySelectorAll("section#about  .carousel-item");
+
+sliderAbouts.forEach((slider, index) => {
+  let rowAbout = slider.childNodes[3];
+
+  if ((index + 1) % 2 == 1) {
+    // kasih class 'left-image' untuk slider ganjil
+    rowAbout.classList.add("right-image");
+  } else {
+    rowAbout.classList.add("left-image");
+  }
+});
