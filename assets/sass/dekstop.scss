@@ -14,12 +14,13 @@
     text-decoration: none;
   }
   li a {
+    text-transform: uppercase;
     color: rgb(187, 187, 187);
-  }
-  li a.active,
-  li a:hover {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
+    &.active,
+    &:hover {
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+    }
   }
 }
 a.logo {
@@ -31,7 +32,7 @@ a.logo {
 .my-menu {
   display: flex;
   list-style-type: none;
-  width: 50%;
+  width: 55vmax;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -52,13 +53,17 @@ a.logo {
   }
   &.show-menu {
     span:nth-child(1) {
-      transform: rotate(45deg) translate(0.5px, 16px);
+      // transform: rotate(45deg) translate(0.5px, 16px);
+      transform: rotate(45deg) translate(10px, -5px);
+      width: 70%;
     }
-    span:nth-child(2) {
-      opacity: 0;
-    }
+    // span:nth-child(2) {
+    //   opacity: 0;
+    // }
     span:nth-child(3) {
-      transform: rotate(-45deg) translate(-1.5px, -14px);
+      width: 70%;
+      transform: rotate(-45deg) translate(10px, 5px);
+      // transform: rotate(-45deg) translate(-1.5px, -14px);
     }
   }
 }

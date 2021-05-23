@@ -15,10 +15,10 @@
   text-decoration: none;
 }
 .my-nav li a {
+  text-transform: uppercase;
   color: #bbbbbb;
 }
-.my-nav li a.active,
-.my-nav li a:hover {
+.my-nav li a.active, .my-nav li a:hover {
   color: white;
   font-weight: 500;
 }
@@ -31,7 +31,7 @@ a.logo {
 .my-menu {
   display: flex;
   list-style-type: none;
-  width: 50%;
+  width: 55vmax;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -53,13 +53,12 @@ a.logo {
   border-radius: 5px;
 }
 .hamburger-menu.show-menu span:nth-child(1) {
-  transform: rotate(45deg) translate(0.5px, 16px);
-}
-.hamburger-menu.show-menu span:nth-child(2) {
-  opacity: 0;
+  transform: rotate(45deg) translate(10px, -5px);
+  width: 70%;
 }
 .hamburger-menu.show-menu span:nth-child(3) {
-  transform: rotate(-45deg) translate(-1.5px, -14px);
+  width: 70%;
+  transform: rotate(-45deg) translate(10px, 5px);
 }
 
 section {
@@ -150,21 +149,31 @@ section#experience .row .card {
   }
 
   .my-menu {
-    transition: 0.5s ease-in;
+    transition: 0.5s;
     flex-direction: column;
     position: fixed;
     z-index: 99991;
     align-items: center;
     justify-content: space-evenly;
     top: 60px;
-    left: -50%;
-    width: 50%;
+    right: -100%;
+    width: 100%;
     bottom: 0;
-    border-right: 2px solid #8a2be2;
-    background-color: #8a2be2;
+    background-color: white;
   }
   .my-menu.show-menu {
-    left: 0;
+    right: 0;
+    opacity: 0.9;
+  }
+  .my-menu li a {
+    color: #8a2be2;
+    font-weight: bold;
+  }
+  .my-menu li a:hover, .my-menu li a.active {
+    padding: 10px;
+    background-color: #8a2be2;
+    color: white;
+    border-radius: 5px;
   }
 
   .hamburger-menu {
