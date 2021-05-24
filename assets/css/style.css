@@ -14,6 +14,9 @@
 .border-dark-red {
   border-color: #80001c !important;
 }
+.border-pink-sass {
+  border-color: #bf4080 !important;
+}
 
 .bg-orange {
   background-color: #b17302 !important;
@@ -29,6 +32,9 @@
 }
 .bg-dark-red {
   background-color: #80001c !important;
+}
+.bg-pink-sass {
+  background-color: #bf4080 !important;
 }
 
 .my-nav {
