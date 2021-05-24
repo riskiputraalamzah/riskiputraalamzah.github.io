@@ -1,4 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.border-orange {
+  border-color: #b17302 !important;
+}
+.border-biru-tua {
+  border-color: blue !important;
+}
+.border-bootstrap {
+  border-color: #7952b3 !important;
+}
+.border-green {
+  border-color: green !important;
+}
+.border-dark-red {
+  border-color: #80001c !important;
+}
+
+.bg-orange {
+  background-color: #b17302 !important;
+}
+.bg-biru-tua {
+  background-color: blue !important;
+}
+.bg-bootstrap {
+  background-color: #7952b3 !important;
+}
+.bg-green {
+  background-color: green !important;
+}
+.bg-dark-red {
+  background-color: #80001c !important;
+}
+
 .my-nav {
   display: flex;
   justify-content: space-around;
@@ -15,7 +47,6 @@
   text-decoration: none;
 }
 .my-nav li a {
-  text-transform: uppercase;
   color: #bbbbbb;
 }
 .my-nav li a.active, .my-nav li a:hover {
@@ -125,6 +156,24 @@ section#experience .row {
 }
 section#experience .row .card {
   color: black !important;
+}
+section#skill .row .column-skill {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px 0;
+}
+section#skill .row .column-skill > * {
+  margin: 5px 0;
+}
+section#skill .row .column-skill .title-skill {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+section#skill .row .column-skill .description-title {
+  font-size: 12px;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

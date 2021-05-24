@@ -1,0 +1,38 @@
+// warna untuk section skill
+
+.border {
+  // untuk warna border
+  &-orange {
+    border-color: rgb(177, 115, 2) !important;
+  }
+  &-biru-tua {
+    border-color: blue !important;
+  }
+  &-bootstrap {
+    border-color: #7952b3 !important;
+  }
+  &-green {
+    border-color: green !important;
+  }
+  &-dark-red {
+    border-color: rgb(128, 0, 28) !important;
+  }
+}
+.bg {
+  // untuk warna background
+  &-orange {
+    background-color: rgb(177, 115, 2) !important;
+  }
+  &-biru-tua {
+    background-color: blue !important;
+  }
+  &-bootstrap {
+    background-color: #7952b3 !important;
+  }
+  &-green {
+    background-color: green !important;
+  }
+  &-dark-red {
+    background-color: rgb(128, 0, 28) !important;
+  }
+}
