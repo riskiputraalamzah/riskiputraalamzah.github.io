@@ -98,8 +98,12 @@ a.logo {
   transform: rotate(-45deg) translate(10px, 5px);
 }
 
+.progress {
+  background-color: white !important;
+}
+
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 section.violet {
   background-color: #8a2be2;
@@ -123,6 +127,9 @@ section span.line-mark-title::after {
 section span.mark-title {
   color: #8a2be2;
 }
+section.violet span.mark-title {
+  color: white;
+}
 section.violet span.line-mark-title::after {
   background-color: white !important;
 }
@@ -130,21 +137,53 @@ section.introduction {
   height: calc(100vh - 60px);
   margin-top: 60px;
   display: flex;
+  position: relative;
   justify-content: space-around;
-  align-items: center;
   flex-direction: column;
+}
+section.introduction .container,
+section.introduction .container-cv {
+  position: relative;
 }
 section.introduction img {
   width: calc(100vw / 10 + 100px);
   height: calc(100vw / 10 + 100px);
 }
-section.introduction .col:nth-child(1) {
+section.introduction .text-introducing {
   font-size: calc(3vw + 8px);
+  font-weight: 500;
 }
-section.introduction .col:nth-child(1) .text-typed {
-  font-weight: bold;
+section.introduction .text-introducing .text-typed,
+section.introduction .text-introducing .my-name {
+  font-weight: bold !important;
   color: black;
   text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+section.introduction .text-introducing .my-name {
+  font-size: calc(3vw + 25px);
+}
+section.introduction .btn-violet {
+  background-color: #8a2be2;
+  color: white;
+  border: 2px solid #8a2be2;
+  transition: 0.5 ease;
+  font-weight: 500;
+}
+section.introduction .btn-violet:hover {
+  background-color: transparent;
+  color: #8a2be2;
+}
+section.introduction::before {
+  content: "";
+  position: absolute;
+  background-image: url(../image/Programmer-rafiki.png);
+  background-repeat: no-repeat;
+  background-size: 50vmax;
+  background-position-x: right;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 section#about .value-about {
   display: flex;
@@ -182,6 +221,13 @@ section#skill .row .column-skill .description-title {
   font-weight: 500;
 }
 
+@media (max-width: 992px) {
+  section.introduction::before {
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+  }
+}
 @media (max-width: 768px) {
   .my-backdrop {
     opacity: 0;
@@ -267,6 +313,10 @@ section#skill .row .column-skill .description-title {
 }
 * {
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #eee;
 }
 
 /*# sourceMappingURL=style.css.map */

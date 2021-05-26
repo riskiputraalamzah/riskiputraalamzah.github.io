@@ -22,7 +22,7 @@ var typed = new Typed(".text-typed", {
 // give background violet for odd section
 const sections = document.querySelectorAll("section");
 sections.forEach((section, i) => {
-  if ((i + 1) % 2 == 1) {
+  if ((i + 1) % 2 == 0) {
     section.classList.add("violet");
   }
 });
