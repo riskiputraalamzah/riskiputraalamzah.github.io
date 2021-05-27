@@ -103,6 +103,7 @@ a.logo {
 }
 
 section {
+  overflow-x: hidden;
   scroll-margin-top: 90px;
 }
 section.violet {

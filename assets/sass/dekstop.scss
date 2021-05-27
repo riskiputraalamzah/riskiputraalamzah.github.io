@@ -71,6 +71,7 @@ a.logo {
   background-color: white !important;
 }
 section {
+  overflow-x: hidden;
   $fontText: calc(100vw / 10 + 100px);
   scroll-margin-top: 90px;
   // background-color: white;

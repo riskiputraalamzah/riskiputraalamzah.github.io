@@ -19,10 +19,11 @@ cards.forEach((card, i) => {
 
   card.dataset.aosDelay = (i + 1) * 100;
 });
+
 forms.forEach((form, i) => {
   form.dataset.aos = (i + 1) % 2 == 1 ? "fade-right" : "fade-left";
 
-  form.dataset.aosDelay = (i + 1) * 100;
+  form.dataset.aosDelay = i + 1 != forms.length ? (i + 1) * 100 : 100;
 });
 AOS.init({
   once: true,
