@@ -133,6 +133,17 @@ section.violet span.mark-title {
 section.violet span.line-mark-title::after {
   background-color: white !important;
 }
+section .btn-violet {
+  background-color: #8a2be2;
+  color: white;
+  border: 2px solid #8a2be2;
+  transition: 0.5 ease;
+  font-weight: 500;
+}
+section .btn-violet:hover {
+  background-color: transparent;
+  color: #8a2be2;
+}
 section.introduction {
   height: calc(100vh - 60px);
   margin-top: 60px;
@@ -161,17 +172,6 @@ section.introduction .text-introducing .my-name {
 }
 section.introduction .text-introducing .my-name {
   font-size: calc(3vw + 25px);
-}
-section.introduction .btn-violet {
-  background-color: #8a2be2;
-  color: white;
-  border: 2px solid #8a2be2;
-  transition: 0.5 ease;
-  font-weight: 500;
-}
-section.introduction .btn-violet:hover {
-  background-color: transparent;
-  color: #8a2be2;
 }
 section.introduction::before {
   content: "";
@@ -306,6 +306,9 @@ section#skill .row .column-skill .description-title {
     align-items: flex-start;
   }
 
+  section.introduction::before {
+    background-size: 70vmax;
+  }
   section#experience .row {
     flex-wrap: nowrap;
     justify-content: flex-start;

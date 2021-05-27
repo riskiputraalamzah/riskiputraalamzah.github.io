@@ -1,3 +1,34 @@
+// AOS Inintialitation
+const skills = document.querySelectorAll(".column-skill");
+const progress = document.querySelectorAll(".progress-bar");
+const cards = document.querySelectorAll("#experience .card");
+const forms = document.querySelectorAll("#contact form .mb-3");
+skills.forEach((skill) => {
+  skill.dataset.aos = "fade-right";
+
+  skill.dataset.aosDelay = 100;
+});
+progress.forEach((p) => {
+  p.dataset.aos = "fade-left";
+
+  p.dataset.aosDelay = 200;
+});
+
+cards.forEach((card, i) => {
+  card.dataset.aos = "flip-left";
+
+  card.dataset.aosDelay = (i + 1) * 100;
+});
+forms.forEach((form, i) => {
+  form.dataset.aos = (i + 1) % 2 == 1 ? "fade-right" : "fade-left";
+
+  form.dataset.aosDelay = (i + 1) * 100;
+});
+AOS.init({
+  once: true,
+});
+
+// end
 const toggleMenu = document.querySelector(".hamburger-menu");
 const menu = document.querySelector(".my-menu");
 const backdrop = document.querySelector(".my-backdrop");

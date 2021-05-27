@@ -14,6 +14,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My Css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
@@ -51,13 +54,6 @@
             <div class="my-name">Riski Putra Alamzah</div>
             <div>I'm a <span class="text-typed"></span></div>
           </div>
-          <!-- <div class="col col-md-4 text-md-right text-center">
-            <img
-              src="./assets/image/1.jpg"
-              class="img-fluid img-thumbnail rounded-circle"
-              alt=""
-            />
-          </div> -->
         </div>
       </div>
       <div class="container-cv">
@@ -79,13 +75,13 @@
     </svg>
 
     <section id="about">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-down">
         <span class="line-mark-title fs-3">About Me</span>
       </div>
       <div class="container">
         <div
           id="carouselExampleIndicators"
-          class="carousel slide carousel-fade"
+          class="carousel slide"
           data-bs-interval="false"
         >
           <div class="carousel-indicators" style="bottom: -40px">
@@ -118,20 +114,28 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="row mb-3">
+              <div class="row mb-3" data-aos="zoom-in-down">
                 <div class="col text-center fs-5">
                   <span class="mark-title fw-bold">Who Am I</span>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5 col-sm-7 col-9">
+                <div
+                  class="col-md-5 col-sm-7 col-9"
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                >
                   <img
                     src="./assets/image/about-me.png"
                     class="img-fluid"
                     alt=""
                   />
                 </div>
-                <div class="col-md-7">
+                <div
+                  class="col-md-7"
+                  data-aos="fade-right"
+                  data-aos-delay="400"
+                >
                   <div class="value-about text-center">
                     <p>
                       I am a person who likes to spend time in front of
@@ -252,11 +256,11 @@
       ></path>
     </svg>
     <section id="skill">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-up">
         <span class="line-mark-title fs-3">My Skill</span>
       </div>
       <div class="container">
-        <div class="text-center mb-3">
+        <div class="text-center mb-3" data-aos="zoom-in-up">
           here are some of my skills in programming
         </div>
         <div class="row">
@@ -511,11 +515,11 @@
       ></path>
     </svg>
     <section id="experience">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-down-right">
         <span class="line-mark-title fs-3">My Experience</span>
       </div>
       <div class="container">
-        <div class="text-center">
+        <div class="text-center" data-aos="fade-down-left">
           I have experience in programming and here are some of the projects I
           have created
         </div>
@@ -623,11 +627,13 @@
     </svg>
 
     <section id="contact">
-      <div class="text-center mb-5">
+      <div class="text-center mb-5" data-aos="fade-down">
         <span class="line-mark-title fs-3">Contact Me</span>
       </div>
       <div class="container">
-        <div class="text-center mb-3">You want to leave message for me?</div>
+        <div class="text-center mb-3" data-aos="fade-up">
+          You want to leave message for me?
+        </div>
         <div class="row justify-content-center">
           <div class="col-xxl-4 col-xl-6 col-sm-10">
             <form action="" method="post">
@@ -647,12 +653,7 @@
                 <textarea id="message" rows="5" class="form-control"></textarea>
               </div>
               <div class="mb-3">
-                <button
-                  class="btn btn-outline-light rounded-pill"
-                  type="button"
-                >
-                  Send
-                </button>
+                <button class="btn btn-violet" type="button">Send</button>
               </div>
             </form>
           </div>
@@ -675,6 +676,9 @@
 
     <!-- typed js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- my script -->
     <script src="./script.js"></script>

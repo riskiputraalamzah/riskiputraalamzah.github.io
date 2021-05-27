@@ -1,9 +1,0 @@
-Fonts used in this design:
-
-Font: Lato
-Author: tyPoland Lukasz Dziedzic
-Url: http://www.fontsquirrel.com/fonts/lato
-
-Font: Ubuntu
-Author: Dalton Maag Ltd
-Url: http://www.fontsquirrel.com/fonts/ubuntu

@@ -9,10 +9,15 @@
   .my-menu {
     align-items: flex-start;
   }
-  section#experience {
-    .row {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
+  section {
+    &.introduction::before {
+      background-size: 70vmax;
+    }
+    &#experience {
+      .row {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
     }
   }
 }

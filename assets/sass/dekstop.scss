@@ -107,7 +107,17 @@ section {
   &.violet span.line-mark-title::after {
     background-color: white !important;
   }
-
+  .btn-violet {
+    background-color: variabel.$myColor;
+    color: white;
+    border: 2px solid variabel.$myColor;
+    transition: 0.5 ease;
+    font-weight: 500;
+    &:hover {
+      background-color: transparent;
+      color: variabel.$myColor;
+    }
+  }
   //   section introduction
   &.introduction {
     height: calc(100vh - 60px);
@@ -140,17 +150,6 @@ section {
 
         // text-shadow: -1px 1px 0 variabel.$myColor, 1px 1px 0 variabel.$myColor,
         //   1px -1px 0 variabel.$myColor, -1px -1px 0 variabel.$myColor;
-      }
-    }
-    .btn-violet {
-      background-color: variabel.$myColor;
-      color: white;
-      border: 2px solid variabel.$myColor;
-      transition: 0.5 ease;
-      font-weight: 500;
-      &:hover {
-        background-color: transparent;
-        color: variabel.$myColor;
       }
     }
 
