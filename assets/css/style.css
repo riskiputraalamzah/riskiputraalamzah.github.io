@@ -186,6 +186,9 @@ section.introduction::before {
   left: 0;
   right: 0;
 }
+section#about {
+  padding-bottom: 30px;
+}
 section#about .value-about {
   display: flex;
   flex-direction: column;
