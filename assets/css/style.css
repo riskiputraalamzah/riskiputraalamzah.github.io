@@ -53,9 +53,6 @@
   text-decoration: none;
 }
 .my-nav li a {
-  color: #bbbbbb;
-}
-.my-nav li a.active, .my-nav li a:hover {
   color: white;
   font-weight: 500;
 }
@@ -104,7 +101,6 @@ a.logo {
 
 section {
   overflow-x: hidden;
-  scroll-margin-top: 90px;
 }
 section.violet {
   background-color: #8a2be2;
@@ -273,12 +269,6 @@ section#skill .row .column-skill .description-title {
   .my-menu li a {
     color: #8a2be2;
     font-weight: bold;
-  }
-  .my-menu li a:hover, .my-menu li a.active {
-    padding: 10px;
-    background-color: #8a2be2;
-    color: white;
-    border-radius: 5px;
   }
 
   .hamburger-menu {

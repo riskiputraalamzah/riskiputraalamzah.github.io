@@ -15,12 +15,14 @@
     text-decoration: none;
   }
   li a {
-    color: rgb(187, 187, 187);
-    &.active,
-    &:hover {
-      color: rgb(255, 255, 255);
-      font-weight: 500;
-    }
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    // color: rgb(187, 187, 187);
+    // &.active,
+    // &:hover {
+    //   color: rgb(255, 255, 255);
+    //   font-weight: 500;
+    // }
   }
 }
 a.logo {
@@ -73,7 +75,7 @@ a.logo {
 section {
   overflow-x: hidden;
   $fontText: calc(100vw / 10 + 100px);
-  scroll-margin-top: 90px;
+  // scroll-margin-top: 90px;
   // background-color: white;
   // color: black;
   &.violet {

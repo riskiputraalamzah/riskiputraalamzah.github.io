@@ -61,17 +61,20 @@ sections.forEach((section, i) => {
 
 // give active menu if clicked
 const containerMenu = document.querySelector(".my-menu");
-const listMenu = document.querySelectorAll(".link-menu");
+const listMenu = document.querySelectorAll(".nav-link");
 
 containerMenu.addEventListener("click", function (e) {
   // alert("ok");
-  console.log(e.target);
-  if (e.target.className == "link-menu") {
-    listMenu.forEach((menu) => {
-      menu.className = "link-menu";
-    });
-    e.target.classList.add("active");
-  }
+  // console.log(e.target);
+  // if (e.target.className == "nav-link") {
+  //   listMenu.forEach((menu) => {
+  //     menu.className = "nav-link";
+  //   });
+  //   e.target.classList.add("active");
+  // }
+  toggleMenu.classList.toggle("show-menu");
+  menu.classList.toggle("show-menu");
+  backdrop.classList.toggle("show-menu");
 });
 
 // section about
@@ -86,4 +89,15 @@ sliderAbouts.forEach((slider, index) => {
   } else {
     rowAbout.classList.add("left-image");
   }
+});
+
+//event click on scroll menu
+const allMenu = document.querySelectorAll(".link-menu");
+allMenu.forEach((menu) => {
+  menu.addEventListener("click", function (e) {
+    e.preventDefault();
+    const idSection = e.target.getAttribute("href");
+    const section = document.querySelector(`section${idSection}`);
+    window.scrollTo(0, section.offsetTop - 85);
+  });
 });

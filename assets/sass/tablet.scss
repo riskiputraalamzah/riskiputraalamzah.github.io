@@ -42,13 +42,18 @@
       a {
         color: variabel.$myColor;
         font-weight: bold;
-        &:hover,
-        &.active {
-          padding: 10px;
-          background-color: variabel.$myColor;
-          color: white;
-          border-radius: 5px;
-        }
+        // &,
+        // &.nav-link:focus {
+        //   color: variabel.$myColor;
+        //   font-weight: bold;
+        // }
+        // &:hover,
+        // &.active {
+        //   padding: 10px;
+        //   background-color: variabel.$myColor !important;
+        //   color: white;
+        //   border-radius: 5px;
+        // }
       }
     }
   }
