@@ -68,6 +68,10 @@
       }
     }
     &#about {
+      .row.right-image > *,
+      .row.left-image > * {
+        margin: 10px 0;
+      }
       .row.right-image {
         flex-direction: column;
         align-items: center;

@@ -1,35 +1,3 @@
-// AOS Inintialitation
-const skills = document.querySelectorAll(".column-skill");
-const progress = document.querySelectorAll(".progress-bar");
-const cards = document.querySelectorAll("#experience .card");
-const forms = document.querySelectorAll("#contact form .mb-3");
-skills.forEach((skill) => {
-  skill.dataset.aos = "fade-right";
-
-  skill.dataset.aosDelay = 100;
-});
-progress.forEach((p) => {
-  p.dataset.aos = "fade-left";
-
-  p.dataset.aosDelay = 200;
-});
-
-cards.forEach((card, i) => {
-  card.dataset.aos = "flip-left";
-
-  card.dataset.aosDelay = (i + 1) * 100;
-});
-
-forms.forEach((form, i) => {
-  form.dataset.aos = (i + 1) % 2 == 1 ? "fade-right" : "fade-left";
-
-  form.dataset.aosDelay = i + 1 != forms.length ? (i + 1) * 100 : 100;
-});
-AOS.init({
-  once: true,
-});
-
-// end
 const toggleMenu = document.querySelector(".hamburger-menu");
 const menu = document.querySelector(".my-menu");
 const backdrop = document.querySelector(".my-backdrop");
@@ -39,15 +7,45 @@ toggleMenu.addEventListener("click", function () {
   backdrop.classList.toggle("show-menu");
 });
 
-// typed introduction
+//! typed introduction
 var typed = new Typed(".text-typed", {
   // Waits 1000ms after typing "First"
   strings: ["Full Stack Developer", "Web Developer", "Freelancer"],
   loop: true,
   typeSpeed: 100,
-  delaySpeed: 200,
+  backDelay: 1000,
   backSpeed: 100,
-  startDelay: 500,
+  startDelay: 1000,
+});
+
+//! owl carousel
+
+$("section#experience .owl-carousel").owlCarousel({
+  loop: true,
+  autoplay: false,
+  dots: true,
+  margin: 20,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    569: {
+      items: 2,
+    },
+    768: {
+      items: 4,
+    },
+  },
+});
+$("section#about .owl-carousel").owlCarousel({
+  loop: true,
+  autoplay: false,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+  },
 });
 
 // check section
@@ -78,7 +76,7 @@ containerMenu.addEventListener("click", function (e) {
 });
 
 // section about
-const sliderAbouts = document.querySelectorAll("section#about  .carousel-item");
+const sliderAbouts = document.querySelectorAll("section#about  .section-about");
 
 sliderAbouts.forEach((slider, index) => {
   let rowAbout = slider.childNodes[3];

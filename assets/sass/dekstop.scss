@@ -107,6 +107,14 @@ section {
   &.violet span.mark-title {
     color: white;
   }
+  &.violet .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: black !important;
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: variabel.$myColor !important;
+  }
   &.violet span.line-mark-title::after {
     background-color: white !important;
   }
@@ -182,13 +190,16 @@ section {
     }
   }
   &#experience {
-    .row {
-      max-height: 100vh;
-      overflow: auto;
-      justify-content: center;
-      .card {
-        color: black !important;
-      }
+    // .row {
+    //   max-height: 100vh;
+    //   overflow: auto;
+    //   justify-content: center;
+    //   .card {
+    //     color: black !important;
+    //   }
+    // }
+    .card {
+      color: black !important;
     }
   }
   &#skill {
@@ -208,6 +219,27 @@ section {
       .description-title {
         font-size: 12px;
         font-weight: 500;
+      }
+    }
+  }
+  &.footer {
+    .row > * {
+      margin: 20px 0;
+    }
+    .sosial-media {
+      display: flex;
+      justify-content: space-evenly;
+      .cover {
+        background-color: white;
+        width: calc(2vw + 40px);
+        height: calc(2vw + 40px);
+        &,
+        img {
+          border-radius: 50%;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

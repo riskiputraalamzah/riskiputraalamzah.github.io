@@ -127,6 +127,14 @@ section span.mark-title {
 section.violet span.mark-title {
   color: white;
 }
+section.violet .owl-theme .owl-dots .owl-dot.active span,
+section .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: black !important;
+}
+section .owl-theme .owl-dots .owl-dot.active span,
+section .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #8a2be2 !important;
+}
 section.violet span.line-mark-title::after {
   background-color: white !important;
 }
@@ -194,12 +202,7 @@ section#about .value-about {
 section#about .row.right-image {
   flex-direction: row-reverse;
 }
-section#experience .row {
-  max-height: 100vh;
-  overflow: auto;
-  justify-content: center;
-}
-section#experience .row .card {
+section#experience .card {
   color: black !important;
 }
 section#skill .row .column-skill {
@@ -219,6 +222,25 @@ section#skill .row .column-skill .title-skill {
 section#skill .row .column-skill .description-title {
   font-size: 12px;
   font-weight: 500;
+}
+section.footer .row > * {
+  margin: 20px 0;
+}
+section.footer .sosial-media {
+  display: flex;
+  justify-content: space-evenly;
+}
+section.footer .sosial-media .cover {
+  background-color: white;
+  width: calc(2vw + 40px);
+  height: calc(2vw + 40px);
+}
+section.footer .sosial-media .cover,
+section.footer .sosial-media .cover img {
+  border-radius: 50%;
+}
+section.footer .sosial-media .cover:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 992px) {
@@ -277,6 +299,10 @@ section#skill .row .column-skill .description-title {
 
   section.introduction .first-row {
     flex-direction: column-reverse;
+  }
+  section#about .row.right-image > *,
+section#about .row.left-image > * {
+    margin: 10px 0;
   }
   section#about .row.right-image {
     flex-direction: column;
