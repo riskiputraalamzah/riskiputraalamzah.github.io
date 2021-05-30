@@ -42,6 +42,7 @@
     <div class="my-backdrop"></div>
     <div class="my-nav">
       <a href="/" class="logo">My Portofolio</a>
+
       <div class="hamburger-menu">
         <span></span>
         <span></span>
@@ -60,6 +61,26 @@
         <li class="list-menu">
           <a class="link-menu" href="#contact">Contact</a>
         </li>
+        <div class="dropdown bahasa">
+          <button
+            class="btn btn-light btn-sm dropdown-toggle"
+            type="button"
+            id="buttonBahasa"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </button>
+          <ul
+            class="dropdown-menu border-my-primary text-my-primary"
+            aria-labelledby="buttonBahasa"
+          >
+            <li>
+              <a class="dropdown-item active" id="en">English</a>
+            </li>
+            <li><a class="dropdown-item" id="id">Indonesia</a></li>
+          </ul>
+        </div>
       </ul>
     </div>
 
@@ -73,7 +94,8 @@
           >
             <div class="sapaan">Hello, my name is</div>
             <div class="my-name">Riski Putra Alamzah</div>
-            <div>I'm a <span class="text-typed"></span></div>
+            <span class="sapaan2">I'm a</span>
+            <span class="text-typed"></span>
           </div>
         </div>
       </div>
@@ -105,7 +127,7 @@
       </div>
       <div class="container">
         <div class="owl-carousel owl-theme">
-          <div class="section-about">
+          <div class="section-about" id="who-am-i">
             <div class="row mb-3" data-aos="zoom-in-down">
               <div class="col text-center fs-5">
                 <span class="mark-title fw-bold">Who Am I</span>
@@ -692,10 +714,10 @@
               flex-column-reverse
             "
             data-aos="fade-up"
-            data-aos-duration="3000"
+            data-aos-duration="2000"
             data-aos-offset="0"
           >
-            <span>Copyright &copy; 2021</span>
+            <span>&copy; 2021</span>
             <span class="d-none d-sm-inline">&mdash;</span>
             <span class="d-sm-inline d-block"
               >Created with <i class="bi bi-suit-heart-fill text-danger"></i> by
@@ -729,9 +751,11 @@
 
     <!-- my script -->
 
+    <script src="./assets/js/function.js"></script>
     <script src="./assets/js/gsap.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/bahasa.js"></script>
 
     <!-- end my script -->
   </body>

@@ -19,6 +19,19 @@
   .my-nav {
     justify-content: space-around;
   }
+  .dropdown.bahasa {
+    button {
+      background-color: variabel.$myColor;
+      color: white;
+      border: 2px solid variabel.$myColor;
+      transition: 0.5 ease;
+      font-weight: 500;
+      &:hover {
+        background-color: transparent;
+        color: variabel.$myColor;
+      }
+    }
+  }
   .my-menu {
     &.show-menu {
       right: 0;

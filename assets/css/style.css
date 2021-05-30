@@ -17,6 +17,9 @@
 .border-pink-sass {
   border-color: #bf4080 !important;
 }
+.border-my-primary {
+  border-color: #8a2be2 !important;
+}
 
 .bg-orange {
   background-color: #b17302 !important;
@@ -35,6 +38,13 @@
 }
 .bg-pink-sass {
   background-color: #bf4080 !important;
+}
+.bg-my-primary {
+  background-color: #8a2be2 !important;
+}
+
+.text-my-primary {
+  color: #8a2be2 !important;
 }
 
 .my-nav {
@@ -55,6 +65,18 @@
 .my-nav li a {
   color: white;
   font-weight: 500;
+}
+
+.dropdown.bahasa button {
+  font-weight: 500;
+}
+.dropdown.bahasa ul > li > a {
+  color: #8a2be2;
+  cursor: pointer;
+}
+.dropdown.bahasa ul > li > a:hover, .dropdown.bahasa ul > li > a.active {
+  background-color: #8a2be2;
+  color: white;
 }
 
 a.logo {
@@ -223,6 +245,9 @@ section#skill .row .column-skill .description-title {
   font-size: 12px;
   font-weight: 500;
 }
+section.footer {
+  overflow-y: hidden;
+}
 section.footer .row > * {
   margin: 20px 0;
 }
@@ -269,6 +294,18 @@ section.footer .sosial-media .cover:hover {
 
   .my-nav {
     justify-content: space-around;
+  }
+
+  .dropdown.bahasa button {
+    background-color: #8a2be2;
+    color: white;
+    border: 2px solid #8a2be2;
+    transition: 0.5 ease;
+    font-weight: 500;
+  }
+  .dropdown.bahasa button:hover {
+    background-color: transparent;
+    color: #8a2be2;
   }
 
   .my-menu {

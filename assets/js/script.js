@@ -1,6 +1,8 @@
-const toggleMenu = document.querySelector(".hamburger-menu");
-const menu = document.querySelector(".my-menu");
-const backdrop = document.querySelector(".my-backdrop");
+
+const toggleMenu = JS(".hamburger-menu");
+const menu = JS(".my-menu");
+const backdrop = JS(".my-backdrop");
+
 toggleMenu.addEventListener("click", function () {
   toggleMenu.classList.toggle("show-menu");
   menu.classList.toggle("show-menu");
@@ -50,7 +52,7 @@ $("section#about .owl-carousel").owlCarousel({
 
 // check section
 // give background violet for odd section
-const sections = document.querySelectorAll("section");
+const sections = JS("section");
 sections.forEach((section, i) => {
   if ((i + 1) % 2 == 0) {
     section.classList.add("violet");
@@ -58,25 +60,23 @@ sections.forEach((section, i) => {
 });
 
 // give active menu if clicked
-const containerMenu = document.querySelector(".my-menu");
-const listMenu = document.querySelectorAll(".nav-link");
+// const containerMenu = document.querySelector(".my-menu");
+// const listMenu = document.querySelectorAll(".nav-link");
 
-containerMenu.addEventListener("click", function (e) {
-  // alert("ok");
-  // console.log(e.target);
-  // if (e.target.className == "nav-link") {
-  //   listMenu.forEach((menu) => {
-  //     menu.className = "nav-link";
-  //   });
-  //   e.target.classList.add("active");
-  // }
-  toggleMenu.classList.toggle("show-menu");
-  menu.classList.toggle("show-menu");
-  backdrop.classList.toggle("show-menu");
-});
+// containerMenu.addEventListener("click", function (e) {
+// alert("ok");
+// console.log(e.target);
+// if (e.target.className == "nav-link") {
+//   listMenu.forEach((menu) => {
+//     menu.className = "nav-link";
+//   });
+//   e.target.classList.add("active");
+// }
+
+// });
 
 // section about
-const sliderAbouts = document.querySelectorAll("section#about  .section-about");
+const sliderAbouts = JS("section#about  .section-about");
 
 sliderAbouts.forEach((slider, index) => {
   let rowAbout = slider.childNodes[3];
@@ -90,12 +90,28 @@ sliderAbouts.forEach((slider, index) => {
 });
 
 //event click on scroll menu
-const allMenu = document.querySelectorAll(".link-menu");
-allMenu.forEach((menu) => {
-  menu.addEventListener("click", function (e) {
-    e.preventDefault();
+const allMenu = JS(".link-menu");
+allMenu.forEach((m) => {
+  m.addEventListener("click", function (e) {
+    toggleMenu.classList.toggle("show-menu");
+    menu.classList.toggle("show-menu");
+    backdrop.classList.toggle("show-menu");
     const idSection = e.target.getAttribute("href");
-    const section = document.querySelector(`section${idSection}`);
+    const section = JS(`section${idSection}`);
     window.scrollTo(0, section.offsetTop - 85);
+    e.preventDefault();
   });
+});
+
+// give active language when clicked
+const dropdown = JS(".dropdown.bahasa ul");
+const listLanguage = JS(".dropdown.bahasa ul li a.dropdown-item");
+
+dropdown.addEventListener("click", function (e) {
+  if (e.target.className == "dropdown-item") {
+    listLanguage.forEach((menu) => {
+      menu.className = "dropdown-item";
+    });
+    e.target.classList.add("active");
+  }
 });

@@ -25,6 +25,21 @@
     // }
   }
 }
+
+.dropdown.bahasa {
+  button {
+    font-weight: 500;
+  }
+  ul > li > a {
+    color: variabel.$myColor;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      background-color: variabel.$myColor;
+      color: white;
+    }
+  }
+}
 a.logo {
   font-size: 25px;
 
@@ -223,6 +238,7 @@ section {
     }
   }
   &.footer {
+    overflow-y: hidden;
     .row > * {
       margin: 20px 0;
     }

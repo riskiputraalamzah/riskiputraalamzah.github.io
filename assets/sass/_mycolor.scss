@@ -1,5 +1,5 @@
 // warna untuk section skill
-
+@use 'variabel';
 .border {
   // untuk warna border
   &-orange {
@@ -19,6 +19,9 @@
   }
   &-pink-sass {
     border-color: #bf4080 !important;
+  }
+  &-my-primary {
+    border-color: variabel.$myColor !important;
   }
 }
 .bg {
@@ -40,5 +43,13 @@
   }
   &-pink-sass {
     background-color: #bf4080 !important;
+  }
+  &-my-primary {
+    background-color: variabel.$myColor !important;
+  }
+}
+.text {
+  &-my-primary {
+    color: variabel.$myColor !important;
   }
 }
