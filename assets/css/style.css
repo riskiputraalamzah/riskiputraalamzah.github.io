@@ -48,15 +48,17 @@
 }
 
 .my-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #8a2be2;
-  height: 60px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99992;
+}
+.my-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 .my-nav a.logo,
 .my-nav ul > li > a {
@@ -65,6 +67,27 @@
 .my-nav li a {
   color: white;
   font-weight: 500;
+}
+
+.to-top {
+  background: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: calc(3vmin + 40px);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.5s;
+}
+.to-top.show {
+  opacity: 1;
 }
 
 .dropdown.bahasa button {
@@ -87,8 +110,10 @@ a.logo {
 .my-menu {
   display: flex;
   list-style-type: none;
-  width: 55vmax;
-  justify-content: space-between;
+  width: 50vmax;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
@@ -292,16 +317,12 @@ section.footer .sosial-media .cover:hover {
     z-index: 9999;
   }
 
-  .my-nav {
-    justify-content: space-around;
-  }
-
   .dropdown.bahasa button {
     background-color: #8a2be2;
     color: white;
     border: 2px solid #8a2be2;
     transition: 0.5 ease;
-    font-weight: 500;
+    font-weight: bold;
   }
   .dropdown.bahasa button:hover {
     background-color: transparent;
@@ -325,7 +346,7 @@ section.footer .sosial-media .cover:hover {
     right: 0;
     opacity: 0.9;
   }
-  .my-menu li a {
+  .my-menu li a.link-menu {
     color: #8a2be2;
     font-weight: bold;
   }
@@ -350,8 +371,7 @@ section#about .row.left-image > * {
   }
 }
 @media (max-width: 569px) {
-  .my-nav,
-.my-menu {
+  .my-menu {
     padding: 0 12px;
   }
 
@@ -361,6 +381,7 @@ section#about .row.left-image > * {
 
   .my-menu {
     align-items: flex-start;
+    flex-wrap: nowrap;
   }
 
   section.introduction::before {

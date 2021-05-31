@@ -2,17 +2,33 @@ JS(".dropdown.bahasa a.dropdown-item").forEach((language) => {
   language.addEventListener("click", function (e) {
     //   mengambil nama function sesuai id element lalu mengoper argumen berisi query target
     const pilihBahasa = e.target.getAttribute("id");
-    gantiBahasa(window[pilihBahasa]());
-    // console.log(JS("#about #who-am-i span.mark-title"));
+    simpanBahasa(pilihBahasa, true);
+
+    JS(".dropdown.bahasa a.dropdown-item").forEach((m) =>
+      m.classList.remove("active")
+    );
+    e.target.classList.add("active");
   });
 });
+function simpanBahasa(bahasa, event) {
+  // jika param bahasa tidak kosong maka set isinya
+  // jika param bahasa kosong dan ada local storage maka set isi local storage
+  // jika local storage tidak ada maka set ke bahasa default (en)
+  localStorage.setItem(
+    "bahasa",
+    bahasa ? bahasa : localStorage.getItem("bahasa") ?? "en"
+  );
 
+  // kasih class active pada bahasa
+  if (!event) {
+    JS(
+      `.dropdown.bahasa a.dropdown-item#${localStorage.getItem("bahasa")}`
+    ).classList.add("active");
+  }
+
+  return gantiBahasa(window[localStorage.getItem("bahasa")]());
+}
 function gantiBahasa(bahasa) {
-  //   for (let index = 0; index < bahasa.length; index++) {
-  //     if (getTarget()[index].nama == bahasa[index].nama) {
-  //       JS(getTarget()[index].query).innerHTML = bahasa[index].value;
-  //     }
-  //   }
   getTarget().forEach((el) => {
     bahasa.forEach((bhs) => {
       if (el.nama == bhs.nama) {
@@ -168,7 +184,7 @@ function en() {
     },
     {
       nama: "cv",
-      value: "Get Cv",
+      value: "Get CV",
     },
     {
       nama: "judul-about",
@@ -180,3 +196,6 @@ function en() {
     },
   ];
 }
+
+// call method
+simpanBahasa();

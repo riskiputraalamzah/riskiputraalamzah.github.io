@@ -1,4 +1,3 @@
-
 const toggleMenu = JS(".hamburger-menu");
 const menu = JS(".my-menu");
 const backdrop = JS(".my-backdrop");
@@ -35,6 +34,9 @@ $("section#experience .owl-carousel").owlCarousel({
       items: 2,
     },
     768: {
+      items: 3,
+    },
+    992: {
       items: 4,
     },
   },
@@ -99,6 +101,7 @@ allMenu.forEach((m) => {
     const idSection = e.target.getAttribute("href");
     const section = JS(`section${idSection}`);
     window.scrollTo(0, section.offsetTop - 85);
+
     e.preventDefault();
   });
 });
@@ -107,11 +110,28 @@ allMenu.forEach((m) => {
 const dropdown = JS(".dropdown.bahasa ul");
 const listLanguage = JS(".dropdown.bahasa ul li a.dropdown-item");
 
-dropdown.addEventListener("click", function (e) {
-  if (e.target.className == "dropdown-item") {
-    listLanguage.forEach((menu) => {
-      menu.className = "dropdown-item";
-    });
-    e.target.classList.add("active");
+// dropdown.addEventListener("click", function (e) {
+//   if (e.target.className == "dropdown-item") {
+//     listLanguage.forEach((menu) => {
+//       menu.className = "dropdown-item";
+//     });
+//     e.target.classList.add("active");
+//   }
+// });
+
+// console.log(JS("svg")[0]);
+let lastScroll = 0;
+window.onscroll = function () {
+  st = window.scrollY;
+  if (st > 150 && st < lastScroll) {
+    JS(".to-top").classList.add("show");
+  } else {
+    JS(".to-top").classList.remove("show");
   }
+
+  lastScroll = st;
+};
+
+JS(".to-top").addEventListener("click", function () {
+  window.scrollTo(0, 0);
 });
