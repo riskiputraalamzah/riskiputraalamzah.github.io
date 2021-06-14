@@ -72,6 +72,13 @@
   font-weight: 500;
 }
 
+.alert {
+  display: none;
+}
+.alert.show {
+  display: block;
+}
+
 .to-top {
   background: white;
   width: 55px;
@@ -153,8 +160,8 @@ section {
   overflow: hidden;
 }
 section.violet {
-  background-color: #8a2be2;
-  color: white;
+  background-color: #dac3ef;
+  color: black;
 }
 section span.line-mark-title {
   position: relative;
@@ -195,7 +202,7 @@ section .owl-theme .owl-dots .owl-dot:hover span {
   border: 2px solid #8a2be2;
 }
 section.violet span.line-mark-title::after {
-  background-color: white !important;
+  background-color: black !important;
 }
 section .btn-violet {
   background-color: #8a2be2;
@@ -209,8 +216,8 @@ section .btn-violet:hover {
   color: #8a2be2;
 }
 section.introduction {
-  height: calc(100vh - 60px);
-  margin-top: 60px;
+  height: 100vh;
+  padding-top: 60px;
   display: flex;
   position: relative;
   justify-content: space-around;
@@ -280,7 +287,9 @@ section#skill .row .column-skill .description-title {
   font-weight: 500;
 }
 section.footer {
+  background-color: #8a2be2 !important;
   overflow-y: hidden;
+  color: white;
 }
 section.footer .row > * {
   margin: 20px 0;
