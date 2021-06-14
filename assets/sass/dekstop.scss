@@ -1,296 +1,368 @@
 @use 'variabel';
 
 .my-nav {
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-  }
-  background-color: variabel.$myColor;
-
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99992;
-  a.logo,
-  ul > li > a {
-    text-decoration: none;
-  }
-  li a {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    // color: rgb(187, 187, 187);
-    // &.active,
-    // &:hover {
-    //   color: rgb(255, 255, 255);
-    //   font-weight: 500;
-    // }
-  }
-}
-.to-top {
-  background: white;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
-  font-size: calc(3vmin + 40px);
-  cursor: pointer;
-  z-index: 10;
-  opacity: 0;
-  transition: 0.5s;
-  &.show {
-    opacity: 1;
-  }
-}
-.dropdown.bahasa {
-  button {
-    font-weight: 500;
-  }
-  ul > li > a {
-    color: variabel.$myColor;
-    cursor: pointer;
-    &:hover,
-    &.active {
-      background-color: variabel.$myColor;
-      color: white;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
     }
-  }
-}
-a.logo {
-  font-size: 25px;
 
-  color: white;
+
+
+    &.box-shadow {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    background-color: variabel.$myColor;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99992;
+
+    a.logo,
+    ul>li>a {
+        text-decoration: none;
+    }
+
+    li a {
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        // color: rgb(187, 187, 187);
+        // &.active,
+        // &:hover {
+        //   color: rgb(255, 255, 255);
+        //   font-weight: 500;
+        // }
+    }
+}
+
+.to-top {
+    background: white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: calc(3vmin + 40px);
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.5s;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.dropdown.bahasa {
+    button {
+        font-weight: 500;
+    }
+
+    ul>li>a {
+        color: variabel.$myColor;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            background-color: variabel.$myColor;
+            color: white;
+        }
+    }
+}
+
+a.logo {
+    font-size: 25px;
+
+    color: white;
 }
 
 .my-menu {
-  display: flex;
-  list-style-type: none;
-  width: 50vmax;
-  flex-wrap: wrap-reverse;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-.hamburger-menu {
-  display: none;
-  width: 30px;
-  height: 30px;
-  justify-content: space-around;
-  flex-direction: column;
-  cursor: pointer;
-  span {
-    display: block;
-    background-color: white;
-    height: 4px;
-    transition: 0.5s ease-in;
-    border-radius: 5px;
-  }
-  &.show-menu {
-    span:nth-child(1) {
-      // transform: rotate(45deg) translate(0.5px, 16px);
-      transform: rotate(45deg) translate(10px, -5px);
-      width: 70%;
-    }
-    // span:nth-child(2) {
-    //   opacity: 0;
-    // }
-    span:nth-child(3) {
-      width: 70%;
-      transform: rotate(-45deg) translate(10px, 5px);
-      // transform: rotate(-45deg) translate(-1.5px, -14px);
-    }
-  }
-}
-.progress {
-  background-color: white !important;
-}
-section {
-  overflow-x: hidden;
-  $fontText: calc(100vw / 10 + 100px);
-  // scroll-margin-top: 90px;
-  // background-color: white;
-  // color: black;
-  &.violet {
-    background-color: variabel.$myColor;
-    color: white;
-  }
-
-  // untuk judul section yang mau dikasih garis bawah
-
-  & span.line-mark-title {
-    position: relative;
-
-    font-weight: 500;
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      left: 0;
-      bottom: -5px;
-      height: 3px;
-      border-radius: 3px;
-      background-color: variabel.$myColor;
-    }
-  }
-  & span.mark-title {
-    color: variabel.$myColor;
-  }
-  &.violet span.mark-title {
-    color: white;
-  }
-  &.violet .owl-theme .owl-dots .owl-dot.active span,
-  .owl-theme .owl-dots .owl-dot:hover span {
-    background-color: black !important;
-  }
-  .owl-theme .owl-dots .owl-dot.active span,
-  .owl-theme .owl-dots .owl-dot:hover span {
-    background-color: variabel.$myColor !important;
-  }
-  &.violet span.line-mark-title::after {
-    background-color: white !important;
-  }
-  .btn-violet {
-    background-color: variabel.$myColor;
-    color: white;
-    border: 2px solid variabel.$myColor;
-    transition: 0.5 ease;
-    font-weight: 500;
-    &:hover {
-      background-color: transparent;
-      color: variabel.$myColor;
-    }
-  }
-  //   section introduction
-  &.introduction {
-    height: calc(100vh - 60px);
-    margin-top: 60px;
     display: flex;
-    position: relative;
+    list-style-type: none;
+    width: 50vmax;
+    flex-wrap: wrap-reverse;
+    align-items: center;
     justify-content: space-around;
-    // align-items: center;
-    flex-direction: column;
-    .container,
-    .container-cv {
-      position: relative;
-    }
-    img {
-      width: $fontText;
-      height: $fontText;
-    }
-    .text-introducing {
-      font-size: calc(3vw + 8px);
-      font-weight: 500;
-      .text-typed,
-      .my-name {
-        font-weight: bold !important;
-        color: black;
-        text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
-          -1px -1px 0 white;
-      }
-      .my-name {
-        font-size: calc(3vw + 25px);
-
-        // text-shadow: -1px 1px 0 variabel.$myColor, 1px 1px 0 variabel.$myColor,
-        //   1px -1px 0 variabel.$myColor, -1px -1px 0 variabel.$myColor;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url(../image/Programmer-rafiki.png);
-      background-repeat: no-repeat;
-      background-size: 50vmax;
-      background-position-x: right;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-  &#about {
-    padding-bottom: 30px;
-    .value-about {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 100%;
-    }
-    .row.right-image {
-      flex-direction: row-reverse;
-    }
-  }
-  &#experience {
-    // .row {
-    //   max-height: 100vh;
-    //   overflow: auto;
-    //   justify-content: center;
-    //   .card {
-    //     color: black !important;
-    //   }
-    // }
-    .card {
-      color: black !important;
-    }
-  }
-  &#skill {
-    .row .column-skill {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      margin: 10px 0;
-      & > * {
-        margin: 5px 0;
-      }
-      .title-skill {
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1;
-      }
-      .description-title {
-        font-size: 12px;
-        font-weight: 500;
-      }
-    }
-  }
-  &.footer {
-    overflow-y: hidden;
-    .row > * {
-      margin: 20px 0;
-    }
-    .sosial-media {
-      display: flex;
-      justify-content: space-evenly;
-      .cover {
-        background-color: white;
-        width: calc(2vw + 40px);
-        height: calc(2vw + 40px);
-        &,
-        img {
-          border-radius: 50%;
-        }
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
+    margin: 0;
+    padding: 0;
 }
-@media (max-width: 992px) {
-  section.introduction {
-    &::before {
-      background-size: cover;
-      background-position: center;
 
-      opacity: 0.4;
+.hamburger-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+
+    span {
+        display: block;
+        background-color: white;
+        height: 4px;
+        transition: 0.5s ease-in;
+        border-radius: 5px;
     }
-  }
+
+    &.show-menu {
+        span:nth-child(1) {
+            // transform: rotate(45deg) translate(0.5px, 16px);
+            transform: rotate(45deg) translate(10px, -5px);
+            width: 70%;
+        }
+
+        // span:nth-child(2) {
+        //   opacity: 0;
+        // }
+        span:nth-child(3) {
+            width: 70%;
+            transform: rotate(-45deg) translate(10px, 5px);
+            // transform: rotate(-45deg) translate(-1.5px, -14px);
+        }
+    }
+}
+
+.progress {
+    background-color: white !important;
+}
+
+section {
+    overflow: hidden;
+    $fontText: calc(100vw / 10 + 100px);
+
+    // scroll-margin-top: 90px;
+    // background-color: white;
+    // color: black;
+    &.violet {
+        background-color: variabel.$myColor;
+        color: white;
+    }
+
+    // untuk judul section yang mau dikasih garis bawah
+
+    & span.line-mark-title {
+        position: relative;
+
+        font-weight: 500;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: variabel.$myColor;
+        }
+    }
+
+    & span.mark-title {
+        color: variabel.$myColor;
+    }
+
+    &.violet span.mark-title {
+        color: white;
+    }
+
+    &.violet .owl-theme .owl-dots .owl-dot.active span {
+        background-color: white !important;
+        border: 2px solid white;
+    }
+
+    &.violet .owl-theme .owl-dots .owl-dot span,
+    &.violet .owl-theme .owl-dots .owl-dot:hover span {
+        background: transparent;
+        border: 2px solid white;
+    }
+
+
+    .owl-theme .owl-dots .owl-dot.active span {
+        background-color: variabel.$myColor !important;
+        border: 2px solid variabel.$myColor;
+    }
+
+    .owl-theme .owl-dots .owl-dot span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: transparent;
+        border: 2px solid variabel.$myColor;
+    }
+
+
+
+    &.violet span.line-mark-title::after {
+        background-color: white !important;
+    }
+
+    .btn-violet {
+        background-color: variabel.$myColor;
+        color: white;
+        border: 2px solid variabel.$myColor;
+        transition: 0.5 ease;
+        font-weight: 500;
+
+        &:hover {
+            background-color: transparent;
+            color: variabel.$myColor;
+        }
+    }
+
+    //   section introduction
+    &.introduction {
+        height: calc(100vh - 60px);
+        margin-top: 60px;
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        // align-items: center;
+        flex-direction: column;
+
+        .container,
+        .container-cv {
+            position: relative;
+        }
+
+        img {
+            width: $fontText;
+            height: $fontText;
+        }
+
+        .text-introducing {
+            font-size: calc(3vw + 8px);
+            font-weight: 500;
+
+            .text-typed,
+            .my-name {
+                font-weight: bold !important;
+                color: black;
+                text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+                    -1px -1px 0 white;
+            }
+
+            .my-name {
+                font-size: calc(3vw + 25px);
+
+                // text-shadow: -1px 1px 0 variabel.$myColor, 1px 1px 0 variabel.$myColor,
+                //   1px -1px 0 variabel.$myColor, -1px -1px 0 variabel.$myColor;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../image/Programmer-rafiki.png);
+            background-repeat: no-repeat;
+            background-size: 50vmax;
+            background-position-x: right;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &#about {
+
+        .row.right-image {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &#experience {
+
+        // .row {
+        //   max-height: 100vh;
+        //   overflow: auto;
+        //   justify-content: center;
+        //   .card {
+        //     color: black !important;
+        //   }
+        // }
+        .parent-card {
+            transition: 0.5s;
+
+            &:hover,
+            &:focus {
+                transform: translateY(-13px);
+
+            }
+        }
+
+        .card {
+            color: black !important;
+
+
+        }
+    }
+
+    &#skill {
+        .row .column-skill {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin: 10px 0;
+
+            &>* {
+                margin: 5px 0;
+            }
+
+            .title-skill {
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            .description-title {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &.footer {
+        overflow-y: hidden;
+
+        .row>* {
+            margin: 20px 0;
+        }
+
+        .sosial-media {
+            display: flex;
+            justify-content: space-evenly;
+
+            .cover {
+                background-color: white;
+                width: calc(2vw + 40px);
+                height: calc(2vw + 40px);
+
+                max-width: 60px;
+                max-height: 60px;
+
+                &,
+                img {
+                    border-radius: 50%;
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    section.introduction {
+        &::before {
+            background-size: cover;
+            background-position: center;
+
+            opacity: 0.4;
+        }
+    }
 }
