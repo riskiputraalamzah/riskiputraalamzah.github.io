@@ -38,7 +38,7 @@
     <div class="my-backdrop"></div>
     <div class="my-nav">
       <div class="container">
-        <a href="#introducing" class="logo">Portofolio</a>
+        <a href="#introducing" class="logo">Putra</a>
         <div class="hamburger-menu">
           <span></span>
           <span></span>
@@ -85,7 +85,8 @@
           data-aos-duration="2000"
         >
           <span
-            class="btn rounded-pill btn-violet btn-lg"
+          onclick="alert('Sorry CV is currently not downloadable!')"
+            class="btn rounded-pill btn-violet btn-lg alertCv"
             style="cursor: pointer"
             >Get CV</span
           >
@@ -101,19 +102,59 @@
     </svg>
 
     <section id="about">
-      <div class="text-center" data-aos="fade-down">
+      <div class="text-center mb-5" data-aos="fade-down">
         <span class="line-mark-title fs-3">About Me</span>
       </div>
       <div class="container">
-        <div class="caraousel-about">
-          <div class="section-about">
+        <nav class="d-block d-md-none" data-aos="fade-up">
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active"
+              id="intro-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#intro"
+              type="button"
+              role="tab"
+              aria-controls="intro"
+              aria-selected="true"
+            >
+              Introduction
+            </button>
+            <button
+              class="nav-link"
+              id="daily-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#daily"
+              type="button"
+              role="tab"
+              aria-controls="daily"
+              aria-selected="false"
+            >
+              Daily Life
+            </button>
+            <button
+              class="nav-link"
+              id="educate-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#educate"
+              type="button"
+              role="tab"
+              aria-controls="educate"
+              aria-selected="false"
+            >
+              Education
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="section-about show active" id="intro">
             <div class="row">
               <div
-                class="col-md-5 col-sm-7 col-9"
+                class="col-md-5 col-sm-7 col-9 d-flex align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="300"
               >
-                <img src="./assets/image/45.png" class="img-fluid" alt="" />
+                <img src="./assets/image/51.png" class="img-fluid" alt="" />
               </div>
               <div class="col-md-7" data-aos="fade-right" data-aos-delay="400">
                 <div
@@ -125,33 +166,29 @@
                     h-100
                   "
                 >
-                  <h5 class="text-center mb-4">
-                    <span class="line-mark-title">Perkenalan</span>
+                  <h5 class="text-center mb-4 d-none d-md-block">
+                    <span>Introduction</span>
                   </h5>
+                  <p>Hi, you can call me <b>Putra</b>.</p>
                   <p>
-                    Hai, kamu bisa memanggilku <b><i>Putra</i></b
-                    >.
+                    I was born on September 13, 2002 in Sidoarjo, East Java.
                   </p>
                   <p>
-                    Saya lahir tanggal 13 September 2002 di Sidoarjo,Jawa Timur.
-                  </p>
-                  <p>
-                    Saat ini saya sedang menjalani profesi menjadi seorang web
-                    developer yang dimana saya mulai suka semenjak masuk
-                    pendidikan SMK.
+                    I am currently in the profession of being a web developers
+                    that I started liking since logging in vocational education
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section-about">
+          <div class="section-about" id="daily">
             <div class="row">
               <div
-                class="col-md-5 col-sm-7 col-9"
+                class="col-md-5 col-sm-7 col-9 d-flex align-items-center"
                 data-aos="fade-left"
                 data-aos-delay="300"
               >
-                <img src="./assets/image/44.png" class="img-fluid" alt="" />
+                <img src="./assets/image/53.png" class="img-fluid" alt="" />
               </div>
               <div class="col-md-7" data-aos="fade-right" data-aos-delay="400">
                 <div
@@ -163,21 +200,137 @@
                     h-100
                   "
                 >
-                  <h5 class="text-center mb-4">
-                    <span class="line-mark-title">Keseharianku</span>
+                  <h5 class="text-center mb-4 d-none d-md-block">
+                    <span>Daily Life</span>
                   </h5>
                   <p>
-                    Saya sehari-hari berlatih coding dengan membuat studi kasus
-                    yang nantinya akan saya jual sebagai pendapatan pribadi saya
+                    I practice coding everyday by making case studies which I
+                    will later sell as my personal income
                   </p>
                   <p>
-                    Saya juga mengajar At-Tartil di daerah rumah saya setiap
-                    hari Senin-jumat setelah maghrib.
+                    I also teach At-Tartil in my home area every Monday-Friday
+                    after Maghrib.
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          <div class="section-about" id="educate">
+            <div class="row">
+              <div
+                class="col-md-5 col-sm-7 col-9 d-flex align-items-center"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
+                <img src="./assets/image/52.png" class="img-fluid" alt="" />
+              </div>
+              <div class="col-md-7" data-aos="fade-right" data-aos-delay="400">
+                <div
+                  class="
+                    value-about
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    h-100
+                  "
+                >
+                  <h5 class="text-center mb-4 d-none d-md-block">
+                    <span>Education</span>
+                  </h5>
+                  <div class="row g-4 cards-education">
+                    <div class="col-12 column-card">
+                      <div
+                        class="
+                          card-education
+                          border-start border-5 border-secondary
+                          p-2
+                        "
+                      >
+                        <div class="gambar">
+                          <img
+                            class="img-fluid img-thumbnail"
+                            src="./assets/image/sd.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text">
+                          <div class="title">SDN Sawotratap 1</div>
+                          <div class="year">From 2009-2015</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 column-card">
+                      <div
+                        class="
+                          card-education
+                          border-start border-5 border-primary
+                          p-2
+                        "
+                      >
+                        <div class="gambar">
+                          <img
+                            class="img-fluid img-thumbnail"
+                            src="./assets/image/smp.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text">
+                          <div class="title">SMPN 4 Waru</div>
+                          <div class="year">From 2015-2018</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 column-card">
+                      <div
+                        class="
+                          card-education
+                          border-start border-5 border-bootstrap
+                          p-2
+                        "
+                      >
+                        <div class="gambar">
+                          <img
+                            class="img-fluid img-thumbnail"
+                            src="./assets/image/smk.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text">
+                          <div class="title">SMKS Antartika 1 SDA (RPL)</div>
+                          <div class="year">From 2018-2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div
+            class="show active"
+            id="intro"
+            role="tabpanel"
+            aria-labelledby="intro-tab"
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+            minima dolor voluptatum voluptatem quod quasi nobis, voluptas
+            laboriosam deleniti! Architecto.
+          </div>
+          <div class="" id="daily" role="tabpanel" aria-labelledby="daily-tab">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            aperiam neque itaque incidunt. In maiores eligendi debitis eaque
+            dicta sequi?
+          </div>
+          <div
+            class=""
+            id="educate"
+            role="tabpanel"
+            aria-labelledby="educate-tab"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+            aperiam neque itaque incidunt. In maiores eligendi debitis eaque
+            dicta sequi?
+          </div> -->
         </div>
       </div>
     </section>
@@ -194,7 +347,7 @@
       </div>
       <div class="container">
         <div class="text-center mb-3" data-aos="zoom-in-up">
-          Berikut kemampuan bahasa pemrograman saya
+          Here's my programming language skills
         </div>
         <div class="row">
           <div class="col-xxl-2 col-xl-3 col-md-4 col-sm-6 column-skill">
@@ -452,7 +605,7 @@
       </div>
       <div class="container">
         <div class="text-center" data-aos="fade-down-left">
-          Berikut beberapa program yang telah saya selesaikan
+          Here are some of the programs I've completed
         </div>
         <div class="row g-4 mt-3">
           <div class="parent-card col-sm-6 col-lg-4 col-xxl-3">

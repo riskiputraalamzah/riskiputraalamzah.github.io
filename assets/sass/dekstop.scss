@@ -1,5 +1,5 @@
 @use 'variabel';
-
+@use 'fonts';
 .my-nav {
   .container {
     display: flex;
@@ -83,8 +83,9 @@
 }
 
 a.logo {
-  font-size: 25px;
-
+  font-size: 35px;
+  font-weight: 500;
+  font-family: fonts.$firaCode;
   color: white;
 }
 
@@ -270,10 +271,56 @@ section {
       right: 0;
     }
   }
-
+  .nav-tabs {
+    border-bottom: 1px solid variabel.$myColorLighten !important;
+    .nav-item.show .nav-link,
+    .nav-link.active {
+      color: variabel.$myColor !important;
+      background-color: #eee !important;
+      border-color: variabel.$myColorLighten variabel.$myColorLighten #eee !important;
+    }
+    .nav-link {
+      color: rgb(37, 37, 37) !important;
+      &:focus,
+      &:hover {
+        color: variabel.$myColor !important;
+        border-color: variabel.$myColorLighten variabel.$myColorLighten #eee !important;
+        isolation: isolate;
+      }
+    }
+  }
   &#about {
     .row.right-image {
       flex-direction: row-reverse;
+    }
+    .cards-education {
+      justify-content: center;
+    }
+    .card-education {
+      margin: 50px 15px 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      position: relative;
+      border-radius: 5px;
+      background: white;
+      .gambar {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        transform: translate(10px, -50px);
+      }
+      .text {
+        margin-top: -30px;
+        .title {
+          font-size: 25px;
+          font-weight: 500;
+        }
+        .year {
+          color: grey;
+          font-size: 14px;
+        }
+      }
     }
   }
 

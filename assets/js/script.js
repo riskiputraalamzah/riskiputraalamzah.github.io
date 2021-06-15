@@ -11,13 +11,15 @@ toggleMenu.addEventListener("click", function () {
 //! typed introduction
 var typed = new Typed(".text-typed", {
   // Waits 1000ms after typing "First"
-  strings: ["Full Stack Developer", "Web Developer", "Freelancer"],
+  strings: ["Full Stack Developer", "Junior Web Developer"],
   loop: true,
   typeSpeed: 100,
   backDelay: 1000,
   backSpeed: 100,
   startDelay: 1000,
 });
+
+// 
 
 //! owl carousel
 $(document).ready(function () {
@@ -50,20 +52,22 @@ $("section#experience .owl-carousel").owlCarousel({
 
 function sliderAbout() {
   if ($(window).width() < 768) {
-    $("section#about .caraousel-about").addClass("owl-carousel owl-theme");
-    $("section#about .owl-carousel").owlCarousel({
-      loop: true,
-      autoplay: false,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-      },
-    });
+    // $("section#about .caraousel-about").addClass("owl-carousel owl-theme");
+    // $("section#about .owl-carousel").owlCarousel({
+    //   loop: true,
+    //   autoplay: false,
+    //   dots: true,
+    //   responsive: {
+    //     0: {
+    //       items: 1,
+    //     },
+    //   },
+    // });
+    $("section#about .tab-content .section-about").addClass("tab-pane fade");
   } else {
-    $("section#about .caraousel-about").owlCarousel("destroy");
-    $("section#about .caraousel-about").removeClass("owl-carousel owl-theme");
+    $("section#about .tab-content .section-about").removeClass("tab-pane fade");
+    // $("section#about .caraousel-about").owlCarousel("destroy");
+    // $("section#about .caraousel-about").removeClass("owl-carousel owl-theme");
   }
 }
 
@@ -167,22 +171,8 @@ const scriptURL =
 const form = document.forms["contact-me"];
 const button = JS("form#contact-me button");
 
-let settingSending = {
-  current: 1,
-  max: 3,
-};
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  if (settingSending.current > settingSending.max) {
-    const warning = {
-      alertColor: "alert-warning",
-      title: "Sorry",
-      msg: "Please wait 30 seconds",
-    };
-    document.querySelector(".place-alert").innerHTML = alert(warning);
-    return form.reset();
-  }
 
   button.innerHTML = textSending();
   button.setAttribute("disabled", true);
@@ -193,20 +183,18 @@ form.addEventListener("submit", (e) => {
   postInput(scriptURL, form, callbackPost);
 
   let result = (obj) => {
-    document.querySelector(".place-alert").innerHTML = alert(obj);
+    document.querySelector(".place-alert").innerHTML = alertContactMe(obj);
     button.removeAttribute("disabled");
     button.innerHTML = "Send";
     form.reset();
     const section = JS(`section#contact`);
     window.scrollTo(0, section.offsetTop - 85);
-
-    settingSending.current++;
   };
 
   //
 });
 
-function alert(obj) {
+function alertContactMe(obj) {
   return `<div
               class="alert ${obj.alertColor} alert-dismissible fade show"
               role="alert"

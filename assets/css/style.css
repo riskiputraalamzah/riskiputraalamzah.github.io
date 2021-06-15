@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap");
 .border-orange {
   border-color: #b17302 !important;
 }
@@ -113,7 +114,9 @@
 }
 
 a.logo {
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Fira Code", monospace;
   color: white;
 }
 
@@ -256,8 +259,54 @@ section.introduction::before {
   left: 0;
   right: 0;
 }
+section .nav-tabs {
+  border-bottom: 1px solid #dac3ef !important;
+}
+section .nav-tabs .nav-item.show .nav-link,
+section .nav-tabs .nav-link.active {
+  color: #8a2be2 !important;
+  background-color: #eee !important;
+  border-color: #dac3ef #dac3ef #eee !important;
+}
+section .nav-tabs .nav-link {
+  color: #252525 !important;
+}
+section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
+  color: #8a2be2 !important;
+  border-color: #dac3ef #dac3ef #eee !important;
+  isolation: isolate;
+}
 section#about .row.right-image {
   flex-direction: row-reverse;
+}
+section#about .cards-education {
+  justify-content: center;
+}
+section#about .card-education {
+  margin: 50px 15px 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  border-radius: 5px;
+  background: white;
+}
+section#about .card-education .gambar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  transform: translate(10px, -50px);
+}
+section#about .card-education .text {
+  margin-top: -30px;
+}
+section#about .card-education .text .title {
+  font-size: 25px;
+  font-weight: 500;
+}
+section#about .card-education .text .year {
+  color: grey;
+  font-size: 14px;
 }
 section#experience .parent-card {
   transition: 0.5s;
@@ -385,6 +434,15 @@ section#about .row.left-image > * {
   }
   section#about .row.left-image {
     justify-content: center;
+  }
+  section#about #my-education .cards-education {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+  }
+  section#about #my-education .cards-education .column-card {
+    width: 85% !important;
   }
 }
 @media (max-width: 569px) {
