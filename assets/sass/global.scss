@@ -3,6 +3,7 @@
 @use "dekstop";
 @use "tablet";
 @use "mobile";
+@use 'loader';
 * {
   font-family: fonts.$montserrat;
 }

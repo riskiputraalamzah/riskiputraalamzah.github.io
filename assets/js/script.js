@@ -1,6 +1,7 @@
 const toggleMenu = JS(".hamburger-menu");
 const menu = JS(".my-menu");
 const backdrop = JS(".my-backdrop");
+const navMenu = JS(".my-menu .list-menu .link-menu");
 
 toggleMenu.addEventListener("click", function () {
   toggleMenu.classList.toggle("show-menu");
@@ -19,7 +20,7 @@ var typed = new Typed(".text-typed", {
   startDelay: 1000,
 });
 
-// 
+//scrollspy
 
 //! owl carousel
 $(document).ready(function () {
@@ -52,22 +53,9 @@ $("section#experience .owl-carousel").owlCarousel({
 
 function sliderAbout() {
   if ($(window).width() < 768) {
-    // $("section#about .caraousel-about").addClass("owl-carousel owl-theme");
-    // $("section#about .owl-carousel").owlCarousel({
-    //   loop: true,
-    //   autoplay: false,
-    //   dots: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //     },
-    //   },
-    // });
     $("section#about .tab-content .section-about").addClass("tab-pane fade");
   } else {
     $("section#about .tab-content .section-about").removeClass("tab-pane fade");
-    // $("section#about .caraousel-about").owlCarousel("destroy");
-    // $("section#about .caraousel-about").removeClass("owl-carousel owl-theme");
   }
 }
 
@@ -79,22 +67,6 @@ sections.forEach((section, i) => {
     section.classList.add("violet");
   }
 });
-
-// give active menu if clicked
-// const containerMenu = document.querySelector(".my-menu");
-// const listMenu = document.querySelectorAll(".nav-link");
-
-// containerMenu.addEventListener("click", function (e) {
-// alert("ok");
-// console.log(e.target);
-// if (e.target.className == "nav-link") {
-//   listMenu.forEach((menu) => {
-//     menu.className = "nav-link";
-//   });
-//   e.target.classList.add("active");
-// }
-
-// });
 
 // section about
 const sliderAbouts = document.querySelectorAll("section#about  .section-about");
@@ -133,15 +105,6 @@ allMenu.forEach((m) => {
 const dropdown = JS(".dropdown.bahasa ul");
 const listLanguage = JS(".dropdown.bahasa ul li a.dropdown-item");
 
-// dropdown.addEventListener("click", function (e) {
-//   if (e.target.className == "dropdown-item") {
-//     listLanguage.forEach((menu) => {
-//       menu.className = "dropdown-item";
-//     });
-//     e.target.classList.add("active");
-//   }
-// });
-
 // console.log(JS("svg")[0]);
 let lastScroll = 0;
 window.onscroll = function () {
@@ -159,6 +122,8 @@ window.onscroll = function () {
   }
 
   lastScroll = st;
+
+  myScrollspy(st);
 };
 
 JS(".to-top").addEventListener("click", function () {
@@ -232,4 +197,19 @@ function textSending() {
                     <span class="visually-hidden">Loading...</span>
                   </div>
                   Sending`;
+}
+window.onload = function () {
+  document.querySelector(".loader").classList.add("close");
+};
+
+function myScrollspy(scroller) {
+  navMenu.forEach((nav) => {
+    let section = document.querySelector(`section${nav.getAttribute("href")}`);
+    nav.classList.remove("active");
+    let offTop = section.offsetTop;
+    let height = offTop + section.clientHeight + 50;
+    if (scroller > offTop - 200 && scroller < height) {
+      nav.classList.add("active");
+    }
+  });
 }
