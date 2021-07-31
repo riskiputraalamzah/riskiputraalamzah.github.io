@@ -1,5 +1,6 @@
 @use 'variabel';
 @use 'fonts';
+@use 'mixins';
 .my-nav {
   .container {
     display: flex;
@@ -55,7 +56,7 @@
   z-index: 10;
   opacity: 0;
   transition: 0.5s;
-
+  background-color: white;
   &.show {
     opacity: 1;
   }
@@ -242,8 +243,7 @@ section {
       .my-name {
         font-weight: bold !important;
         color: black;
-        text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
-          -1px -1px 0 white;
+        @include mixins.textStroke(white);
       }
 
       .my-name {

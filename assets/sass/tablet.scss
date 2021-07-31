@@ -1,4 +1,5 @@
 @use 'variabel';
+@use 'mixins';
 @media (max-width: 768px) {
   .my-backdrop {
     opacity: 0;
@@ -55,18 +56,21 @@
       a.link-menu {
         color: variabel.$myColor;
         font-weight: bold;
-        // &,
-        // &.nav-link:focus {
-        //   color: variabel.$myColor;
-        //   font-weight: bold;
-        // }
-        // &:hover,
-        // &.active {
-        //   padding: 10px;
-        //   background-color: variabel.$myColor !important;
-        //   color: white;
-        //   border-radius: 5px;
-        // }
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 3px;
+          margin: 0 auto;
+          background-color: variabel.$myColor;
+          transition: 0.2s linear;
+        }
+        &:hover,
+        &.active {
+          &::after {
+            width: 100%;
+          }
+        }
       }
     }
   }

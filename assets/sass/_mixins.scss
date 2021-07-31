@@ -1,0 +1,5 @@
+@mixin textStroke($color, $weight: 1) {
+  text-shadow: -#{$weight}px #{$weight}px 0 $color,
+    #{$weight}px #{$weight}px 0 $color, #{$weight}px -#{$weight}px 0 $color,
+    -#{$weight}px -#{$weight}px 0 $color;
+}

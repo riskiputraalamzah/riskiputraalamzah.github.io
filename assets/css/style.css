@@ -97,6 +97,7 @@
   z-index: 10;
   opacity: 0;
   transition: 0.5s;
+  background-color: white;
 }
 .to-top.show {
   opacity: 1;
@@ -416,6 +417,18 @@ section.footer .sosial-media .cover img {
   .my-menu li a.link-menu {
     color: #8a2be2;
     font-weight: bold;
+  }
+  .my-menu li a.link-menu::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #8a2be2;
+    transition: 0.2s linear;
+  }
+  .my-menu li a.link-menu:hover::after, .my-menu li a.link-menu.active::after {
+    width: 100%;
   }
 
   .hamburger-menu {
