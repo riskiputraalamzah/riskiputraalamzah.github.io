@@ -135,29 +135,30 @@ const scriptURL =
   "https://script.google.com/macros/s/AKfycbwbztdn-jt-TuaIzJXj9_RBUy7ajkRSyxBoYPn3i2fDQhJM6VpEICDfomUWVVFGitLl/exec";
 const form = document.forms["contact-me"];
 const button = JS("form#contact-me button");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+    button.innerHTML = textSending();
+    button.setAttribute("disabled", true);
+    let callbackPost = (obj) => {
+      result(obj);
+    };
 
-  button.innerHTML = textSending();
-  button.setAttribute("disabled", true);
-  let callbackPost = (obj) => {
-    result(obj);
-  };
+    postInput(scriptURL, form, callbackPost);
 
-  postInput(scriptURL, form, callbackPost);
+    let result = (obj) => {
+      document.querySelector(".place-alert").innerHTML = alertContactMe(obj);
+      button.removeAttribute("disabled");
+      button.innerHTML = "Send";
+      form.reset();
+      const section = JS(`section#contact`);
+      window.scrollTo(0, section.offsetTop - 85);
+    };
 
-  let result = (obj) => {
-    document.querySelector(".place-alert").innerHTML = alertContactMe(obj);
-    button.removeAttribute("disabled");
-    button.innerHTML = "Send";
-    form.reset();
-    const section = JS(`section#contact`);
-    window.scrollTo(0, section.offsetTop - 85);
-  };
-
-  //
-});
+    //
+  });
+}
 
 function alertContactMe(obj) {
   return `<div
@@ -207,8 +208,8 @@ function myScrollspy(scroller) {
     let section = document.querySelector(`section${nav.getAttribute("href")}`);
     nav.classList.remove("active");
     let offTop = section.offsetTop;
-    let height = offTop + section.clientHeight + 50;
-    if (scroller > offTop - 200 && scroller < height) {
+    let height = offTop + section.clientHeight;
+    if (scroller > offTop - 170 && scroller < height) {
       nav.classList.add("active");
     }
   });
