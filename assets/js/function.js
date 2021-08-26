@@ -12,3 +12,9 @@ function copyright() {
   document.querySelector("span.copy").textContent = result;
 }
 copyright();
+function cv() {
+  window.open(
+    "https://www.cakeresume.com/s--hJk_CpuzkZok1zlWusZ35g--/riski-alamzah",
+    "_blank"
+  );
+}
