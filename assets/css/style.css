@@ -233,8 +233,8 @@ section.introduction .container-cv {
   position: relative;
 }
 section.introduction img {
-  width: calc(100vw / 10 + 100px);
-  height: calc(100vw / 10 + 100px);
+  width: calc(10vw + 100px);
+  height: calc(10vw + 100px);
 }
 section.introduction .text-introducing {
   font-size: calc(3vw + 8px);
@@ -317,6 +317,8 @@ section#experience .parent-card:hover, section#experience .parent-card:focus {
   transform: translateY(-13px);
 }
 section#experience .card {
+  border: none !important;
+  background-color: transparent !important;
   color: black !important;
 }
 section#skill .row .column-skill {

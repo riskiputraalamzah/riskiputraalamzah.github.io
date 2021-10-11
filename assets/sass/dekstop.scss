@@ -1,6 +1,6 @@
-@use 'variabel';
-@use 'fonts';
-@use 'mixins';
+@use "variabel";
+@use "fonts";
+@use "mixins";
 .my-nav {
   .container {
     display: flex;
@@ -339,6 +339,8 @@ section {
     }
 
     .card {
+      border: none !important;
+      background-color: transparent !important;
       color: black !important;
     }
   }
