@@ -275,7 +275,9 @@ section {
       background-color: #eee !important;
       border-color: variabel.$myColorLighten variabel.$myColorLighten #eee !important;
     }
+
     .nav-link {
+      white-space: nowrap;
       color: rgb(37, 37, 37) !important;
       &:focus,
       &:hover {
@@ -288,6 +290,9 @@ section {
   &#about {
     .row.right-image {
       flex-direction: row-reverse;
+    }
+    .tab-about {
+      display: none;
     }
     .cards-education {
       justify-content: center;

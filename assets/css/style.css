@@ -271,6 +271,7 @@ section .nav-tabs .nav-link.active {
   border-color: #dac3ef #dac3ef #eee !important;
 }
 section .nav-tabs .nav-link {
+  white-space: nowrap;
   color: #252525 !important;
 }
 section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
@@ -280,6 +281,9 @@ section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
 }
 section#about .row.right-image {
   flex-direction: row-reverse;
+}
+section#about .tab-about {
+  display: none;
 }
 section#about .cards-education {
   justify-content: center;
@@ -440,16 +444,30 @@ section.footer .sosial-media .cover img {
   section.introduction .first-row {
     flex-direction: column-reverse;
   }
+  section#about .tab-about {
+    display: block !important;
+  }
+  section#about .tab-about .nav-tabs {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+  }
+  section#about .tab-about .nav-tabs::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+    display: none;
+  }
   section#about .row.right-image > *,
 section#about .row.left-image > * {
     margin: 10px 0;
   }
-  section#about .row.right-image {
+  section#about .row.right-image,
+section#about .row.left-image {
     flex-direction: column;
     align-items: center;
-  }
-  section#about .row.left-image {
-    justify-content: center;
   }
 }
 @media (max-width: 569px) {
