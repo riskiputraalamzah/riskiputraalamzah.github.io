@@ -93,10 +93,16 @@
           data-aos-duration="2000"
         >
           <span
-            onclick="cv()"
+            onclick="linkTargetBlank('cv')"
             class="btn rounded-pill btn-violet btn-lg alertCv"
             style="cursor: pointer"
             >Get CV</span
+          >
+          <span
+            onclick="linkTargetBlank('hireMe')"
+            class="btn rounded-pill ms-2 btn-outline-violet btn-lg"
+            style="cursor: pointer"
+            >Hire Me</span
           >
         </div>
       </div>
@@ -115,60 +121,69 @@
       </div>
       <div class="container">
         <nav class="tab-about" data-aos="fade-up">
-          <div
-            class="nav nav-tabs nav-fill flex-nowrap"
+          <ul
+            class="nav nav-pills flex-nowrap mb-3"
             id="nav-tab"
             role="tablist"
           >
-            <button
-              class="nav-link active"
-              id="intro-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#intro"
-              type="button"
-              role="tab"
-              aria-controls="intro"
-              aria-selected="true"
-            >
-              Introduction
-            </button>
-            <button
-              class="nav-link"
-              id="daily-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#daily"
-              type="button"
-              role="tab"
-              aria-controls="daily"
-              aria-selected="false"
-            >
-              Daily Life
-            </button>
-            <button
-              class="nav-link"
-              id="educate-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#educate"
-              type="button"
-              role="tab"
-              aria-controls="educate"
-              aria-selected="false"
-            >
-              Education
-            </button>
-            <button
-              class="nav-link"
-              id="current-work-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#current-work"
-              type="button"
-              role="tab"
-              aria-controls="current-work"
-              aria-selected="false"
-            >
-              Experience
-            </button>
-          </div>
+            <li class="nav-item" role="presentation">
+              <!-- <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button> -->
+              <button
+                class="nav-link active"
+                id="intro-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#intro"
+                type="button"
+                role="tab"
+                aria-controls="intro"
+                aria-selected="true"
+              >
+                Introduction
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="daily-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#daily"
+                type="button"
+                role="tab"
+                aria-controls="daily"
+                aria-selected="false"
+              >
+                Daily Life
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="educate-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#educate"
+                type="button"
+                role="tab"
+                aria-controls="educate"
+                aria-selected="false"
+              >
+                Education
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="current-work-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#current-work"
+                type="button"
+                role="tab"
+                aria-controls="current-work"
+                aria-selected="false"
+              >
+                Experience
+              </button>
+            </li>
+          </ul>
         </nav>
         <div class="tab-content" id="nav-tabContent">
           <div class="section-about show active" id="intro">
@@ -673,6 +688,22 @@
           Here are some of the programs I've completed
         </div>
         <div class="row g-4 mt-3 justify-content-center">
+          <div class="parent-card col-sm-6 col-lg-4 col-xxl-3">
+            <div class="card">
+              <img
+                src="./assets/image/projects/eagan.png"
+                class="card-img-top img-fluid img-lazyload"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4>PT. Eagan Warsana Energi</h4>
+                <div>
+                  <span class="badge bg-dark">Landing Page</span>
+                  <span class="badge bg-bootstrap">Bootstrap 5</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="parent-card col-sm-6 col-lg-4 col-xxl-3">
             <div class="card">
               <img

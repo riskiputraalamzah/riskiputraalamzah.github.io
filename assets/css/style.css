@@ -220,6 +220,17 @@ section .btn-violet:hover {
   background-color: transparent;
   color: #8a2be2;
 }
+section .btn-outline-violet {
+  background-color: transparent;
+  color: #8a2be2;
+  border: 2px solid #8a2be2;
+  transition: background 0.5 ease;
+  font-weight: 500;
+}
+section .btn-outline-violet:hover {
+  background-color: #8a2be2;
+  color: white;
+}
 section.introduction {
   height: 100vh;
   padding-top: 60px;
@@ -278,6 +289,19 @@ section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
   color: #8a2be2 !important;
   border-color: #dac3ef #dac3ef #eee !important;
   isolation: isolate;
+}
+section#about .nav-pills {
+  overflow-x: auto;
+}
+section#about .nav-pills li {
+  white-space: nowrap;
+}
+section#about .nav-pills li .nav-link {
+  color: #8a2be2;
+}
+section#about .nav-pills li .nav-link.active {
+  color: white;
+  background-color: #8a2be2;
 }
 section#about .row.right-image {
   flex-direction: row-reverse;
