@@ -341,13 +341,42 @@ section#about .card-education .text .year {
 section#experience .parent-card {
   transition: 0.5s;
 }
+section#experience .parent-card a.link-project {
+  position: absolute;
+  z-index: 999;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: background 0.5s ease, 0.5s ease;
+  background-color: transparent;
+  border-radius: 5px;
+  color: white;
+}
+section#experience .parent-card a.link-project i {
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 2rem;
+  transform: translateY(-2rem);
+}
 section#experience .parent-card:hover, section#experience .parent-card:focus {
   transform: translateY(-13px);
+}
+section#experience .parent-card:hover a.link-project, section#experience .parent-card:focus a.link-project {
+  position: absolute;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section#experience .parent-card:hover a.link-project i, section#experience .parent-card:focus a.link-project i {
+  opacity: 1;
+  transform: translateY(0);
 }
 section#experience .card {
   border: none !important;
   background-color: transparent !important;
   color: black !important;
+  position: relative;
 }
 section#skill .row .column-skill {
   display: flex;
