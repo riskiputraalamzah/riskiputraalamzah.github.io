@@ -1,23 +1,21 @@
 @media (max-width: 569px) {
+  // .my-nav,
+  .my-menu {
+    padding: 0 12px;
+  }
 
-    // .my-nav,
-    .my-menu {
-        padding: 0 12px;
+  .my-nav {
+    justify-content: space-between;
+  }
+
+  .my-menu {
+    // align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  section {
+    &.introduction::before {
+      background-size: 70vmax;
     }
-
-    .my-nav {
-        justify-content: space-between;
-    }
-
-    .my-menu {
-        align-items: flex-start;
-        flex-wrap: nowrap;
-    }
-
-    section {
-        &.introduction::before {
-            background-size: 70vmax;
-        }
-
-    }
+  }
 }

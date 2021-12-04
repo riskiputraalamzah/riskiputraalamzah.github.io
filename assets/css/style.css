@@ -292,6 +292,7 @@ section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
 }
 section#about .nav-pills {
   overflow-x: auto;
+  padding-bottom: 1rem;
 }
 section#about .nav-pills li {
   white-space: nowrap;
@@ -533,7 +534,6 @@ section#about .row.left-image {
   }
 
   .my-menu {
-    align-items: flex-start;
     flex-wrap: nowrap;
   }
 
