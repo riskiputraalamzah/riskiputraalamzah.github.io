@@ -291,8 +291,19 @@ section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
   isolation: isolate;
 }
 section#about .nav-pills {
-  overflow-x: auto;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
   padding-bottom: 1rem;
+}
+section#about .nav-pills::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+  display: none;
+  /* Safari and Chrome */
 }
 section#about .nav-pills li {
   white-space: nowrap;
