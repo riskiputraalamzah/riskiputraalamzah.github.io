@@ -353,6 +353,12 @@ section#about .card-education .text .year {
 section#experience .parent-card {
   transition: 0.5s;
 }
+section#experience .parent-card .design-by {
+  position: relative;
+  z-index: 9999;
+  font-size: 14px;
+  color: gray;
+}
 section#experience .parent-card a.link-project {
   position: absolute;
   z-index: 999;
@@ -374,6 +380,12 @@ section#experience .parent-card a.link-project i {
 }
 section#experience .parent-card:hover, section#experience .parent-card:focus {
   transform: translateY(-13px);
+}
+section#experience .parent-card:hover .design-by, section#experience .parent-card:focus .design-by {
+  color: white !important;
+}
+section#experience .parent-card:hover .design-by a, section#experience .parent-card:focus .design-by a {
+  color: white !important;
 }
 section#experience .parent-card:hover a.link-project, section#experience .parent-card:focus a.link-project {
   position: absolute;

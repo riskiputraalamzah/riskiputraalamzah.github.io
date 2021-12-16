@@ -370,6 +370,12 @@ section {
     //   }
     // }
     .parent-card {
+      .design-by {
+        position: relative;
+        z-index: 9999;
+        font-size: 14px;
+        color: gray;
+      }
       transition: 0.5s;
       a.link-project {
         position: absolute;
@@ -393,6 +399,12 @@ section {
       &:hover,
       &:focus {
         transform: translateY(-13px);
+        .design-by {
+          color: white !important;
+          & a {
+            color: white !important;
+          }
+        }
         a.link-project {
           position: absolute;
           opacity: 1;
