@@ -1,5 +1,5 @@
 // warna untuk section skill
-@use 'variabel';
+@use "variabel";
 .border {
   // untuk warna border
   &-orange {
@@ -23,11 +23,17 @@
   &-my-primary {
     border-color: variabel.$myColor !important;
   }
+  &-umsida {
+    border-color: #08315f !important;
+  }
 }
 .bg {
   // untuk warna background
   &-orange {
     background-color: rgb(177, 115, 2) !important;
+  }
+  &-umsida {
+    background-color: #08315f !important;
   }
   &-biru-tua {
     background-color: blue !important;

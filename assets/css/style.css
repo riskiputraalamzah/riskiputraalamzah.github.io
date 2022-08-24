@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap");
 .border-orange {
-  border-color: #b17302 !important;
+  border-color: rgb(177, 115, 2) !important;
 }
 .border-biru-tua {
   border-color: blue !important;
@@ -13,7 +13,7 @@
   border-color: green !important;
 }
 .border-dark-red {
-  border-color: #80001c !important;
+  border-color: rgb(128, 0, 28) !important;
 }
 .border-pink-sass {
   border-color: #bf4080 !important;
@@ -21,9 +21,15 @@
 .border-my-primary {
   border-color: #8a2be2 !important;
 }
+.border-umsida {
+  border-color: #08315f !important;
+}
 
 .bg-orange {
-  background-color: #b17302 !important;
+  background-color: rgb(177, 115, 2) !important;
+}
+.bg-umsida {
+  background-color: #08315f !important;
 }
 .bg-biru-tua {
   background-color: blue !important;
@@ -35,7 +41,7 @@
   background-color: green !important;
 }
 .bg-dark-red {
-  background-color: #80001c !important;
+  background-color: rgb(128, 0, 28) !important;
 }
 .bg-pink-sass {
   background-color: #bf4080 !important;
@@ -70,10 +76,10 @@
 }
 .my-nav li a {
   font-weight: 500;
-  color: #cecece;
+  color: rgb(206, 206, 206);
 }
 .my-nav li a.active, .my-nav li a:hover {
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
@@ -284,7 +290,7 @@ section .nav-tabs .nav-link.active {
 }
 section .nav-tabs .nav-link {
   white-space: nowrap;
-  color: #252525 !important;
+  color: rgb(37, 37, 37) !important;
 }
 section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
   color: #8a2be2 !important;
@@ -293,18 +299,15 @@ section .nav-tabs .nav-link:focus, section .nav-tabs .nav-link:hover {
 }
 section#about .nav-pills {
   overflow-x: scroll;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
   padding-bottom: 1rem;
 }
 section#about .nav-pills::-webkit-scrollbar {
   /* WebKit */
   width: 0;
   height: 0;
-  display: none;
-  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 section#about .nav-pills li {
   white-space: nowrap;
@@ -468,7 +471,6 @@ section.footer .sosial-media .cover img {
     opacity: 1;
     z-index: 9999;
   }
-
   .dropdown.bahasa button {
     background-color: #8a2be2;
     color: white;
@@ -480,7 +482,6 @@ section.footer .sosial-media .cover img {
     background-color: transparent;
     color: #8a2be2;
   }
-
   .my-menu {
     transition: 0.5s;
     flex-direction: column;
@@ -514,11 +515,9 @@ section.footer .sosial-media .cover img {
   .my-menu li a.link-menu:hover::after, .my-menu li a.link-menu.active::after {
     width: 100%;
   }
-
   .hamburger-menu {
     display: flex;
   }
-
   section.introduction .first-row {
     flex-direction: column-reverse;
   }
@@ -527,10 +526,8 @@ section.footer .sosial-media .cover img {
   }
   section#about .tab-about .nav-tabs {
     overflow-y: scroll;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
   section#about .tab-about .nav-tabs::-webkit-scrollbar {
     /* WebKit */
@@ -552,15 +549,12 @@ section#about .row.left-image {
   .my-menu {
     padding: 0 12px;
   }
-
   .my-nav {
     justify-content: space-between;
   }
-
   .my-menu {
     flex-wrap: nowrap;
   }
-
   section.introduction::before {
     background-size: 70vmax;
   }
