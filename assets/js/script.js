@@ -10,19 +10,6 @@ toggleMenu.addEventListener("click", function () {
 });
 
 //! typed introduction
-var typed = new Typed(".text-typed", {
-  // Waits 1000ms after typing "First"
-  strings: [
-    "Full Stack Web Developer",
-    "Junior Web Developer",
-    "Enthusiastic Web Developer",
-  ],
-  loop: true,
-  typeSpeed: 100,
-  backDelay: 1000,
-  backSpeed: 100,
-  startDelay: 1000,
-});
 
 //scrollspy
 
@@ -205,6 +192,19 @@ function textSending() {
 }
 window.onload = function () {
   document.querySelector(".loader").classList.add("close");
+  var typed = new Typed(".text-typed", {
+    // Waits 1000ms after typing "First"
+    strings: [
+      "Full Stack Web Developer",
+      "Junior Web Developer",
+      "Enthusiastic Web Developer",
+    ],
+    loop: true,
+    typeSpeed: 100,
+    backDelay: 2000,
+    backSpeed: 100,
+    startDelay: 2000,
+  });
 };
 
 function myScrollspy(scroller) {
