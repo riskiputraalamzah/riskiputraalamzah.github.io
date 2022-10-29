@@ -172,19 +172,7 @@ function textSending() {
 window.onload = function () {
   cekTheme();
   document.querySelector(".loader").classList.add("close");
-  var typed = new Typed(".text-typed", {
-    // Waits 1000ms after typing "First"
-    strings: [
-      "Full Stack Web Developer",
-      "Junior Web Developer",
-      "Enthusiastic Web Developer",
-    ],
-    loop: true,
-    typeSpeed: 100,
-    backDelay: 500,
-    backSpeed: 100,
-    startDelay: 500,
-  });
+  
 };
 
 function myScrollspy(scroller) {
