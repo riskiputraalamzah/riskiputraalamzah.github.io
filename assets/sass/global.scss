@@ -1,12 +1,13 @@
 @use "fonts";
+@use "variabel";
 @use "mycolor";
 @use "dekstop";
 @use "tablet";
 @use "mobile";
-@use 'loader';
+@use "loader";
 * {
   font-family: fonts.$montserrat;
 }
 body {
-  background-color: #eee;
+  background-color: variabel.$lightGrey;
 }

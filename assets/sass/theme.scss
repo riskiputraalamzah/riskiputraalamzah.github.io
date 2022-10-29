@@ -1,0 +1,96 @@
+@use "variabel";
+html.dark {
+  #theme {
+    background-color: #eee !important;
+    .light {
+      display: block;
+    }
+    .dark {
+      display: none;
+    }
+  }
+  body {
+    .loader {
+      background-color: variabel.$darkGrey !important;
+    }
+    background-color: variabel.$darkGrey !important;
+
+    .violet {
+      background-color: variabel.$myColorDark !important;
+    }
+    section > *,
+    section#contact a,
+    section#experience .card {
+      color: white !important;
+    }
+    .my-menu {
+      opacity: 1;
+    }
+    section.violet span.line-mark-title::after {
+      background-color: white !important;
+    }
+    .to-top {
+      box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+// .animate-theme {
+//   &.show {
+//     width: 200%;
+//     height: 100%;
+//   }
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   width: 0;
+//   height: 0;
+//   z-index: 999999999;
+//   transition: 1s ease-in-out;
+//   background-color: #eee;
+//   border-radius: 0 50% 50% 0;
+// }
+#theme {
+  &.animate {
+    animation: animateTheme 2s ease-in-out;
+  }
+  .light {
+    color: orange;
+    display: none;
+  }
+  .dark {
+    color: white;
+    display: block;
+  }
+
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  background-color: variabel.$darkGrey !important;
+  z-index: 99999;
+  /* padding: 30px; */
+  width: 60px;
+  height: 60px;
+  transition: 1s ease-in-out, background 1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+}
+@keyframes animateTheme {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(100);
+  }
+  75% {
+    transform: scale(100);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

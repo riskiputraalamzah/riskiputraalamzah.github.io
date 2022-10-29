@@ -1,6 +1,14 @@
 @use "variabel";
 @use "mixins";
 @media (max-width: 768px) {
+  html.dark body {
+    .my-menu {
+      background-color: variabel.$darkGrey !important;
+      li a.link-menu::after {
+        background-color: white !important;
+      }
+    }
+  }
   .my-backdrop {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);

@@ -107,7 +107,7 @@
 }
 .to-top.show {
   opacity: 1;
-  z-index: 999999;
+  z-index: 9999;
 }
 
 .dropdown.bahasa button {
@@ -270,11 +270,11 @@ section.introduction .text-introducing .my-name {
 section.introduction::before {
   content: "";
   position: absolute;
-  background-image: url(../image/Programmer-rafiki.png);
+  background-image: url(../image/human.png);
   background-repeat: no-repeat;
-  background-size: 50vmax;
-  background-position-x: right;
-  top: 0;
+  background-size: contain;
+  background-position-x: 90%;
+  top: 100px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -329,6 +329,7 @@ section#about .cards-education {
   justify-content: center;
 }
 section#about .card-education {
+  color: black;
   margin: 50px 15px 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -450,12 +451,18 @@ section.footer .sosial-media .cover img {
 
 @media (max-width: 992px) {
   section.introduction::before {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    opacity: 0.4;
+    opacity: 0.5;
   }
 }
 @media (max-width: 768px) {
+  html.dark body .my-menu {
+    background-color: #212529 !important;
+  }
+  html.dark body .my-menu li a.link-menu::after {
+    background-color: white !important;
+  }
   .my-backdrop {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -554,9 +561,6 @@ section#about .row.left-image {
   }
   .my-menu {
     flex-wrap: nowrap;
-  }
-  section.introduction::before {
-    background-size: 70vmax;
   }
 }
 .loader {

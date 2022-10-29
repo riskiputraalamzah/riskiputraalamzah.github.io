@@ -1,0 +1,78 @@
+html.dark #theme {
+  background-color: #eee !important;
+}
+html.dark #theme .light {
+  display: block;
+}
+html.dark #theme .dark {
+  display: none;
+}
+html.dark body {
+  background-color: #212529 !important;
+}
+html.dark body .loader {
+  background-color: #212529 !important;
+}
+html.dark body .violet {
+  background-color: #170528 !important;
+}
+html.dark body section > *,
+html.dark body section#contact a,
+html.dark body section#experience .card {
+  color: white !important;
+}
+html.dark body .my-menu {
+  opacity: 1;
+}
+html.dark body section.violet span.line-mark-title::after {
+  background-color: white !important;
+}
+html.dark body .to-top {
+  box-shadow: 0 0 10px 7px rgba(255, 255, 255, 0.8);
+}
+
+#theme {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #212529 !important;
+  z-index: 99999;
+  /* padding: 30px; */
+  width: 60px;
+  height: 60px;
+  transition: 1s ease-in-out, background 1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+}
+#theme.animate {
+  animation: animateTheme 2s ease-in-out;
+}
+#theme .light {
+  color: orange;
+  display: none;
+}
+#theme .dark {
+  color: white;
+  display: block;
+}
+
+@keyframes animateTheme {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(100);
+  }
+  75% {
+    transform: scale(100);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

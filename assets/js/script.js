@@ -191,6 +191,7 @@ function textSending() {
                   Sending`;
 }
 window.onload = function () {
+  cekTheme();
   document.querySelector(".loader").classList.add("close");
   var typed = new Typed(".text-typed", {
     // Waits 1000ms after typing "First"
@@ -217,4 +218,35 @@ function myScrollspy(scroller) {
       nav.classList.add("active");
     }
   });
+}
+
+let isDark = document.documentElement.hasAttribute("class");
+
+function cekTheme() {
+  const waves = document.querySelectorAll("svg");
+  const light = "#dac3ef";
+  const dark = "#170528";
+  let theme = light;
+  if (isDark) {
+    theme = dark;
+  }
+  waves.forEach((wave, i) => {
+    if (i != waves.length - 1) {
+      wave.children[0].setAttribute("fill", theme);
+    }
+  });
+}
+
+function toggleTheme(el) {
+  isDark = !isDark;
+  Array.from(el.children).forEach((e) => e.classList.add("d-none"));
+  el.classList.add("animate");
+  setTimeout(() => {
+    darkTheme(isDark);
+    cekTheme();
+    setTimeout(() => {
+      Array.from(el.children).forEach((e) => e.classList.remove("d-none"));
+      el.classList.remove("animate");
+    }, 1000);
+  }, 1000);
 }

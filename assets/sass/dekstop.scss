@@ -59,7 +59,7 @@
   background-color: white;
   &.show {
     opacity: 1;
-    z-index: 999999;
+    z-index: 9999;
   }
 }
 
@@ -270,11 +270,11 @@ section {
     &::before {
       content: "";
       position: absolute;
-      background-image: url(../image/Programmer-rafiki.png);
+      background-image: url(../image/human.png);
       background-repeat: no-repeat;
-      background-size: 50vmax;
-      background-position-x: right;
-      top: 0;
+      background-size: contain;
+      background-position-x: 90%;
+      top: 100px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -334,6 +334,7 @@ section {
       justify-content: center;
     }
     .card-education {
+      color: black;
       margin: 50px 15px 0;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
       position: relative;
@@ -482,10 +483,10 @@ section {
 @media (max-width: 992px) {
   section.introduction {
     &::before {
-      background-size: cover;
+      background-size: contain;
       background-position: center;
 
-      opacity: 0.4;
+      opacity: 0.5;
     }
   }
 }
