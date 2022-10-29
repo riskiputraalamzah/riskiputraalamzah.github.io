@@ -9,22 +9,22 @@
       }
     }
   }
-  .my-backdrop {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: -9999;
-    top: 0;
+  // .my-backdrop {
+  //   opacity: 0;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   position: fixed;
+  //   z-index: -9999;
+  //   top: 0;
 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: 0.5s ease-in;
-    &.show-menu {
-      opacity: 1;
-      z-index: 9999;
-    }
-  }
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   transition: 0.5s ease-in;
+  //   &.show-menu {
+  //     opacity: 1;
+  //     z-index: 9999;
+  //   }
+  // }
   // .my-nav .container {
   //   justify-content: space-around;
   // }

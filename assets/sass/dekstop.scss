@@ -270,7 +270,7 @@ section {
     &::before {
       content: "";
       position: absolute;
-      background-image: url(../image/human.png);
+      background-image: url(../image/human.webp);
       background-repeat: no-repeat;
       background-size: contain;
       background-position-x: 90%;
@@ -486,7 +486,7 @@ section {
       background-size: contain;
       background-position: center;
 
-      opacity: 0.5;
+      opacity: 0.7;
     }
   }
 }

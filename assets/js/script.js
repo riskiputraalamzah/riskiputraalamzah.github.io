@@ -1,12 +1,12 @@
 const toggleMenu = JS(".hamburger-menu");
 const menu = JS(".my-menu");
-const backdrop = JS(".my-backdrop");
+// const backdrop = JS(".my-backdrop");
 const navMenu = JS(".my-menu .list-menu .link-menu");
 
 toggleMenu.addEventListener("click", function () {
   toggleMenu.classList.toggle("show-menu");
   menu.classList.toggle("show-menu");
-  backdrop.classList.toggle("show-menu");
+  // backdrop.classList.toggle("show-menu");
 });
 
 //! typed introduction
@@ -62,7 +62,7 @@ allMenu.forEach((m) => {
   m.addEventListener("click", function (e) {
     toggleMenu.classList.toggle("show-menu");
     menu.classList.toggle("show-menu");
-    backdrop.classList.toggle("show-menu");
+    // backdrop.classList.toggle("show-menu");
     const idSection = e.target.getAttribute("href");
     const section = JS(`section${idSection}`);
     window.scrollTo(0, section.offsetTop - 85);
@@ -204,7 +204,7 @@ let isDark = document.documentElement.hasAttribute("class");
 function cekTheme() {
   const waves = document.querySelectorAll("svg");
   const light = "#dac3ef";
-  const dark = "#170528";
+  const dark = "#322b38";
   let theme = light;
   if (isDark) {
     theme = dark;

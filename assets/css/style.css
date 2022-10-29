@@ -270,7 +270,7 @@ section.introduction .text-introducing .my-name {
 section.introduction::before {
   content: "";
   position: absolute;
-  background-image: url(../image/human.png);
+  background-image: url(../image/human.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 90%;
@@ -453,7 +453,7 @@ section.footer .sosial-media .cover img {
   section.introduction::before {
     background-size: contain;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 @media (max-width: 768px) {
@@ -462,21 +462,6 @@ section.footer .sosial-media .cover img {
   }
   html.dark body .my-menu li a.link-menu::after {
     background-color: white !important;
-  }
-  .my-backdrop {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: -9999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: 0.5s ease-in;
-  }
-  .my-backdrop.show-menu {
-    opacity: 1;
-    z-index: 9999;
   }
   .dropdown.bahasa button {
     background-color: #8a2be2;
@@ -561,6 +546,9 @@ section#about .row.left-image {
   }
   .my-menu {
     flex-wrap: nowrap;
+  }
+  section.introduction::before {
+    background-position-x: 90%;
   }
 }
 .loader {

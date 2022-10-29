@@ -20,7 +20,8 @@ html.dark {
     }
     section > *,
     section#contact a,
-    section#experience .card {
+    section#experience .card,
+    section .btn-outline-violet {
       color: white !important;
     }
     .my-menu {
@@ -52,7 +53,7 @@ html.dark {
 // }
 #theme {
   &.animate {
-    animation: animateTheme 2s ease-in-out;
+    animation: animateTheme 2s linear;
   }
   .light {
     color: orange;
@@ -83,14 +84,18 @@ html.dark {
 @keyframes animateTheme {
   0% {
     transform: scale(1);
+    z-index: 9999999;
   }
   50% {
     transform: scale(100);
+    z-index: 9999999;
   }
   75% {
-    transform: scale(100);
+    transform: scale(50);
+    z-index: 9999999;
   }
   100% {
     transform: scale(1);
+    z-index: 9999999;
   }
 }

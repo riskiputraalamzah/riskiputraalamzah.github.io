@@ -14,9 +14,9 @@
     flex-wrap: nowrap;
   }
 
-  // section {
-  //   &.introduction::before {
-  //     background-size: 70vmax;
-  //   }
-  // }
+  section {
+    &.introduction::before {
+      background-position-x: 90%;
+    }
+  }
 }
