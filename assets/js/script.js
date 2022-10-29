@@ -171,7 +171,7 @@ function textSending() {
 }
 window.onload = function () {
   cekTheme();
-  document.querySelector(".loader").classList.add("close");
+  //document.querySelector(".loader").classList.add("close");
   var typed = new Typed(".text-typed", {
     // Waits 1000ms after typing "First"
     strings: [
