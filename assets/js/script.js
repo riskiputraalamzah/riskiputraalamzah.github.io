@@ -21,27 +21,6 @@ $(window).on("resize", function () {
   sliderAbout();
 });
 
-$("section#experience .owl-carousel").owlCarousel({
-  loop: true,
-  autoplay: false,
-  dots: true,
-  margin: 20,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    569: {
-      items: 2,
-    },
-    768: {
-      items: 3,
-    },
-    992: {
-      items: 4,
-    },
-  },
-});
-
 function sliderAbout() {
   if ($(window).width() < 768) {
     $("section#about .tab-content .section-about").addClass("tab-pane fade");
