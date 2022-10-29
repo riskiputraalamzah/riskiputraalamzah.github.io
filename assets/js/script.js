@@ -171,7 +171,7 @@ function textSending() {
 }
 window.onload = function () {
   cekTheme();
-  //document.querySelector(".loader").classList.add("close");
+  document.querySelector(".loader").classList.add("close");
   var typed = new Typed(".text-typed", {
     // Waits 1000ms after typing "First"
     strings: [
@@ -204,7 +204,7 @@ let isDark = document.documentElement.hasAttribute("class");
 function cekTheme() {
   const waves = document.querySelectorAll("svg");
   const light = "#dac3ef";
-  const dark = "#322b38";
+  const dark = "#5b377d";
   let theme = light;
   if (isDark) {
     theme = dark;
