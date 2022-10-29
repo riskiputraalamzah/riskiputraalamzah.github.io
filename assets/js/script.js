@@ -181,9 +181,9 @@ window.onload = function () {
     ],
     loop: true,
     typeSpeed: 100,
-    backDelay: 2000,
+    backDelay: 500,
     backSpeed: 100,
-    startDelay: 2000,
+    startDelay: 500,
   });
 };
 
