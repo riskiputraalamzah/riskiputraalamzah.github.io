@@ -204,7 +204,7 @@ let isDark = document.documentElement.hasAttribute("class");
 function cekTheme() {
   const waves = document.querySelectorAll("svg");
   const light = "#dac3ef";
-  const dark = "#5b377d";
+  const dark = "#3c2750";
   let theme = light;
   if (isDark) {
     theme = dark;

@@ -16,7 +16,7 @@
 
   section {
     &.introduction::before {
-      background-position-x: 90%;
+      background-position-x: calc(50% + 10vh);
     }
   }
 }
