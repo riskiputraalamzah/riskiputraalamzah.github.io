@@ -176,8 +176,9 @@ window.onload = function () {
     // Waits 1000ms after typing "First"
     strings: [
       "Full Stack Web Developer",
-      "Junior Web Developer",
+      "Beginner Web Developer",
       "Enthusiastic Web Developer",
+      "Freelance Developer"
     ],
     loop: true,
     typeSpeed: 100,
